@@ -1,29 +1,21 @@
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Button, Input, Modal, Text } from '@nextui-org/react';
 
 import { COLORS } from '../constants/colors';
-import { Input as CustomInput } from '../components/Input';
-import { useState } from 'react';
+import { Input as FileInput } from '../components/Input';
 
 export const CustomModal = ({ visible, closeHandler }) => {
   const plans = [
-    { values: 'Others', labels: 'Others' },
-    { values: 'Agriculture', labels: 'Agriculture' },
-    { values: 'Automobile', labels: 'Automobile' },
-    { values: 'Banking', labels: 'Banking' },
-    { values: 'Construction', labels: 'Construction' },
-    { values: 'Education', labels: 'Education' },
-    { values: 'Entertainment', labels: 'Entertainment' },
-    { values: 'Fashion', labels: 'Fashion' },
-    { values: 'Food', labels: 'Food' },
-    { values: 'Health', labels: 'Health' }
+    'Others',
+    'Agriculture',
+    'Automobile',
+    'Banking',
+    'Construction',
+    'Education',
+    'Entertainment',
+    'Fashion',
+    'Foo',
+    'Health'
   ];
 
   return (
@@ -50,7 +42,7 @@ export const CustomModal = ({ visible, closeHandler }) => {
             placeholder="Your business plan"
           />
 
-          <SelectPlan items={plans} />
+          <SelectPlan options={plans} />
           <Typography variant="body2" textAlign="left" color={COLORS.PRIMARY}>
             Drag and drop your file here
           </Typography>
@@ -70,7 +62,7 @@ export const CustomModal = ({ visible, closeHandler }) => {
             }}
             padding={3}
           >
-            <CustomInput
+            <FileInput
               type="file"
               style={{
                 height: '2rem',
@@ -100,27 +92,25 @@ export const CustomModal = ({ visible, closeHandler }) => {
   );
 };
 
-const SelectPlan = ({ items }) => {
-  const [age, setAge] = useState('None');
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
+const SelectPlan = ({ options }) => {
+  const onOptionChangeHandler = (event) => {
+    console.log('User Selected Value -> ', event.target.value);
   };
-
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small">Age</InputLabel>
-      <Select
-        labelId="demo-select-small"
-        id="demo-select-small"
-        value={age}
-        label="Age"
-        onChange={handleChange}
-      >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
-      </Select>
-    </FormControl>
+    <select
+      onChange={onOptionChangeHandler}
+      style={{
+        border: '1px solid #ccc',
+        outline: 'none',
+        padding: '0.5rem',
+        borderRadius: '5px',
+        width: '100%'
+      }}
+    >
+      <option>Select</option>
+      {options.map((option) => {
+        return <option key={option}>{option}</option>;
+      })}
+    </select>
   );
 };
