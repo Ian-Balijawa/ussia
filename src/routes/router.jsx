@@ -4,7 +4,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom';
 import LoadingScreen from '../components/LoadingScreen';
 import { PATH } from './paths';
 
-const Loadable = (Component: FC<any>) => (props: any) => {
+const Loadable = (Component) => (props) => {
   return (
     <Suspense fallback={<LoadingScreen />}>
       <Component {...props} />

@@ -1,12 +1,19 @@
 import { Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
-import { Link } from 'react-router-dom';
+import { CustomModal } from './../Modal';
+import PlanForm from '../PlanForm';
+import { useState } from 'react';
 
 export const CreateBusinessPlanCard = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <Link to={'/create-plan'}>
+    <>
       <Stack
+        onClick={handleOpen}
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -17,8 +24,9 @@ export const CreateBusinessPlanCard = () => {
           boxShadow: '1px 0px 6px 4px rgb(0 0 0 / 25%)',
           borderRadius: '4px',
           padding: '20px',
-          width: 'fit-content',
-          margin: '2em auto'
+          width: 'max-width',
+          margin: '2em auto',
+          cursor: 'pointer'
         }}
       >
         <Stack
@@ -63,6 +71,10 @@ export const CreateBusinessPlanCard = () => {
           </Typography>
         </Stack>
       </Stack>
-    </Link>
+
+      <CustomModal open={open} handleClose={handleClose}>
+        <PlanForm />
+      </CustomModal>
+    </>
   );
 };

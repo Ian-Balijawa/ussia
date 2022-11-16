@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.file__component{
+	border: 1px solid #CCC;
+}
+::file-selector-button {
+  /* background-color: #c44141;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; */
+
+  display: none;
+}
