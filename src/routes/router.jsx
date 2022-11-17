@@ -14,9 +14,11 @@ const Loadable = (Component) => (props) => {
 const SignIn = Loadable(lazy(() => import('../pages/signin')));
 const Home = Loadable(lazy(() => import('../pages/home')));
 const SignUp = Loadable(lazy(() => import('../pages/signup')));
-const CreateProfile = Loadable(lazy(() => import('../pages/create-plan')));
+const CreatPlan = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
 const ToWork = Loadable(lazy(() => import('../pages/to-work')));
+const EditPlan = Loadable(lazy(() => import('../pages/edit-plan')));
+const Videos = Loadable(lazy(() => import('../pages/videos')));
 
 export default createBrowserRouter([
   {
@@ -33,11 +35,23 @@ export default createBrowserRouter([
   },
   {
     path: ROUTES.CREATE_PLAN,
-    element: <CreateProfile />
+    element: <CreatPlan />
   },
   {
     path: ROUTES.TO_WORK,
     element: <ToWork />
+  },
+  {
+    path: ROUTES.EDIT_PLAN,
+    element: <EditPlan />
+  },
+  {
+    path: ROUTES.VIDEOS,
+    element: <Videos />
+  },
+  {
+    path: ROUTES.TOOLKIT,
+    element: null
   },
   {
     path: ROUTES.NOT_FOUND,

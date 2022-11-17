@@ -55,8 +55,15 @@ export default () => {
             autoFocus
           />
           <SelectLabels plans={plans} />
-          <Typography variant="body2" textAlign="left" color={COLORS.PRIMARY}>
-            Drag and drop your file here
+          <Typography variant="h3" textAlign="left" color={COLORS.PRIMARY}>
+            Upload a cover photo
+            <Typography
+              variant="body2"
+              textAlign="left"
+              color={COLORS.PRIMARY}
+            ></Typography>
+            The cover photo will be used in your export. Make sure your image is
+            at least 1,000px wide.
           </Typography>
           <Box
             sx={{

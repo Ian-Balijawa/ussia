@@ -4,7 +4,7 @@ import { Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../constants/colors';
 import { CustomModal } from '../components/Modal';
-import FeatureCard from '../components/Cards/FeatuerCard';
+import FeatureCard from '../components/Cards/FeatureCard';
 import { Image } from '@nextui-org/react';
 import PlanForm from '../components/PlanForm';
 import course from '../assets/svgs/courses.svg';

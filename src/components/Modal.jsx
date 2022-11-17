@@ -43,8 +43,13 @@ export const CustomModal = ({ visible, closeHandler }) => {
           />
 
           <SelectPlan options={plans} />
+
           <Typography variant="body2" textAlign="left" color={COLORS.PRIMARY}>
-            Drag and drop your file here
+            Upload a cover photo
+          </Typography>
+          <Typography variant="p" color={COLORS.PRIMARY}>
+            The cover photo will be used in your export. Make sure your image is
+            at least 1,000px wide.
           </Typography>
           <Box
             sx={{

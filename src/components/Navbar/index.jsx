@@ -1,8 +1,19 @@
-import { Avatar, Dropdown, Link, Navbar, Text } from '@nextui-org/react';
+import {
+  Avatar,
+  Button,
+  Dropdown,
+  Link,
+  Navbar,
+  Text
+} from '@nextui-org/react';
 
+import { CollapsibleContext } from '../../context/collapsible';
 import { Layout } from './Layout';
+import { List } from 'phosphor-react';
 import { Logo } from './Logo';
 import { ROUTES } from '../../routes/paths';
+import { useContext } from 'react';
+import { Stack } from '@mui/material';
 
 export default () => {
   const collapseItems = [
@@ -16,6 +27,8 @@ export default () => {
     'Contact'
   ];
 
+  const { collapseSidebar } = useContext(CollapsibleContext);
+
   return (
     <Layout>
       <Navbar isBordered variant="sticky">
@@ -27,7 +40,9 @@ export default () => {
             }
           }}
         >
-          <Logo />
+          <Stack sx={{ cursor: 'pointer' }}>
+            <List size={32} onClick={() => collapseSidebar()} />
+          </Stack>
           <Navbar.Content
             enableCursorHighlight
             activeColor="secondary"
