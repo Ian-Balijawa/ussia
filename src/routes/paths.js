@@ -15,7 +15,7 @@ const ROUTES = {
   VIDEOS: path( ROOT, 'videos' ),
   PODCASTS: path( ROOT, 'podcasts' ),
   COURSES: path( ROOT, 'courses' ),
-  TOOLKIT: path( ROOT, 'tookit' ),
+  TOOLKIT: path( ROOT, 'toolkit' ),
   ALL: path( ROOT, '*' )
 };
 

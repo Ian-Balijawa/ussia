@@ -19,7 +19,7 @@ const NotFound = Loadable(lazy(() => import('../pages/404')));
 const ToWork = Loadable(lazy(() => import('../pages/to-work')));
 const EditPlan = Loadable(lazy(() => import('../pages/edit-plan')));
 const Videos = Loadable(lazy(() => import('../pages/videos')));
-
+const Tookit = Loadable(lazy(() => import('../pages/toolkit')));
 export default createBrowserRouter([
   {
     path: ROUTES.ROOT,
@@ -51,7 +51,7 @@ export default createBrowserRouter([
   },
   {
     path: ROUTES.TOOLKIT,
-    element: null
+    element: <Tookit />
   },
   {
     path: ROUTES.NOT_FOUND,

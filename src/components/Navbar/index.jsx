@@ -1,19 +1,10 @@
-import {
-  Avatar,
-  Button,
-  Dropdown,
-  Link,
-  Navbar,
-  Text
-} from '@nextui-org/react';
+import { Avatar, Dropdown, Link, Navbar, Text } from '@nextui-org/react';
 
 import { CollapsibleContext } from '../../context/collapsible';
 import { Layout } from './Layout';
 import { List } from 'phosphor-react';
-import { Logo } from './Logo';
-import { ROUTES } from '../../routes/paths';
-import { useContext } from 'react';
 import { Stack } from '@mui/material';
+import { useContext } from 'react';
 
 export default () => {
   const collapseItems = [
