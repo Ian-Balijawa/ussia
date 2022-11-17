@@ -35,7 +35,7 @@ export default () => {
   ];
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="lg">
       <Box
         sx={{
           marginTop: 8,
@@ -65,7 +65,7 @@ export default () => {
               justifyContent: 'center',
               display: 'flex',
               borderRadius: '5px',
-              width: '100%',
+              width: 'fit-content',
               height: 'fit-content',
               cursor: 'pointer',
               '&:hover': {

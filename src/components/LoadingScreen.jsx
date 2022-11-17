@@ -1,5 +1,5 @@
-import { CircularProgress, Stack } from '@mui/material';
-
+import { Loading } from '@nextui-org/react';
+import { Stack } from '@mui/material';
 export default () => {
   return (
     <Stack
@@ -8,7 +8,7 @@ export default () => {
       height="100vh"
       alignItems="center"
     >
-      <CircularProgress />;
+      <Loading type="gradient" />
     </Stack>
   );
 };

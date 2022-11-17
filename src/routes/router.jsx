@@ -1,8 +1,8 @@
-import { FC, Suspense, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
 import LoadingScreen from '../components/LoadingScreen';
-import { PATH } from './paths';
+import { ROUTES } from './paths';
 
 const Loadable = (Component) => (props) => {
   return (
@@ -16,30 +16,35 @@ const Home = Loadable(lazy(() => import('../pages/home')));
 const SignUp = Loadable(lazy(() => import('../pages/signup')));
 const CreateProfile = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
+const ToWork = Loadable(lazy(() => import('../pages/to-work')));
 
 export default createBrowserRouter([
   {
-    path: PATH.ROOT,
+    path: ROUTES.ROOT,
     element: <Home />
   },
   {
-    path: PATH.SIGNIN,
+    path: ROUTES.SIGNIN,
     element: <SignIn />
   },
   {
-    path: PATH.SIGNUP,
+    path: ROUTES.SIGNUP,
     element: <SignUp />
   },
   {
-    path: PATH.CREATE_PLAN,
+    path: ROUTES.CREATE_PLAN,
     element: <CreateProfile />
   },
   {
-    path: PATH.NOT_FOUND,
+    path: ROUTES.TO_WORK,
+    element: <ToWork />
+  },
+  {
+    path: ROUTES.NOT_FOUND,
     element: <NotFound />
   },
   {
-    path: PATH.ALL,
-    element: <Navigate to={PATH.NOT_FOUND} />
+    path: ROUTES.ALL,
+    element: <Navigate to={ROUTES.NOT_FOUND} />
   }
 ]);

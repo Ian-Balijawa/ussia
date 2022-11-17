@@ -1,20 +1,19 @@
 import { Avatar, Dropdown, Link, Navbar, Text } from '@nextui-org/react';
 
-import { AcmeLogo } from './AcmeLogo.js';
-import { Layout } from './Layout.js';
+import { Layout } from './Layout';
+import { Logo } from './Logo';
+import { ROUTES } from '../../routes/paths';
 
 export default () => {
   const collapseItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out'
+    'Business Plan',
+    'Videos',
+    'Toolkit',
+    'Podcasts',
+    'Courses',
+    'Events',
+    'FAQ',
+    'Contact'
   ];
 
   return (
@@ -28,24 +27,23 @@ export default () => {
             }
           }}
         >
-          <AcmeLogo />
-          <Text b color="inherit" hideIn="xs">
-            ACME
-          </Text>
+          <Logo />
+          <Navbar.Content
+            enableCursorHighlight
+            activeColor="secondary"
+            hideIn="xs"
+            variant="highlight-rounded"
+          >
+            <Navbar.Link isActive href="#">
+              Business Plan
+            </Navbar.Link>
+            <Navbar.Link href="#">Videos</Navbar.Link>
+            <Navbar.Link href="#">Toolkit</Navbar.Link>
+            <Navbar.Link href="#">Podcasts</Navbar.Link>
+            <Navbar.Link href="#">Courses</Navbar.Link>
+          </Navbar.Content>
         </Navbar.Brand>
-        <Navbar.Content
-          enableCursorHighlight
-          activeColor="secondary"
-          hideIn="xs"
-          variant="highlight-rounded"
-        >
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link isActive href="#">
-            Customers
-          </Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
-        </Navbar.Content>
+
         <Navbar.Content
           css={{
             '@xs': {
@@ -54,6 +52,18 @@ export default () => {
             }
           }}
         >
+          <Navbar.Content
+            enableCursorHighlight
+            activeColor="secondary"
+            hideIn="xs"
+            variant="highlight-rounded"
+          >
+            <Navbar.Link isActive href="#">
+              Events
+            </Navbar.Link>
+            <Navbar.Link href="#">FAQ</Navbar.Link>
+            <Navbar.Link href="#">Contact</Navbar.Link>
+          </Navbar.Content>
           <Dropdown placement="bottom-right">
             <Navbar.Item>
               <Dropdown.Trigger>
@@ -76,18 +86,10 @@ export default () => {
                   Signed in as
                 </Text>
                 <Text b color="inherit" css={{ d: 'flex' }}>
-                  zoey@example.com
+                  ian@ussia.org
                 </Text>
               </Dropdown.Item>
-              <Dropdown.Item key="settings" withDivider>
-                My Settings
-              </Dropdown.Item>
-              <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
-              <Dropdown.Item key="analytics" withDivider>
-                Analytics
-              </Dropdown.Item>
               <Dropdown.Item key="system">System</Dropdown.Item>
-              <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
               <Dropdown.Item key="help_and_feedback" withDivider>
                 Help & Feedback
               </Dropdown.Item>
