@@ -7,7 +7,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
 export default () => {
-  const [visible, setVisible] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
+  const [boxVisible, setBoxVisible] = useState(false);
   const [description, setDescription] = useState('');
   console.log(description);
   return (
@@ -46,7 +47,7 @@ export default () => {
           question: "What will my life look like in 5 years?" . Also think about
           where you are working towards with your company.
         </Typography>
-        {visible ? (
+        {textVisible ? (
           <Typography variant="body2" textAlign="left">
             Your vision describes where you see yourself within a number of
             years . Usually we keep in mind a time span of 3 to 5 years. A
@@ -61,9 +62,9 @@ export default () => {
           color={COLORS.PRIMARY}
           sx={{ cursor: 'pointer', margin: '1em 0' }}
           textAlign="left"
-          onClick={() => setVisible((visibility) => !visibility)}
+          onClick={() => setTextVisible((visibility) => !visibility)}
         >
-          {visible ? (
+          {textVisible ? (
             <Stack
               direction="row"
               alignItems="center"
@@ -86,7 +87,7 @@ export default () => {
           )}
         </Typography>
         <Box>
-          {visible ? (
+          {boxVisible ? (
             <Box
               spacing={1}
               sx={{
@@ -122,9 +123,9 @@ export default () => {
             color={COLORS.PRIMARY}
             sx={{ cursor: 'pointer', margin: '1em 0' }}
             textAlign="left"
-            onClick={() => setVisible((visibility) => !visibility)}
+            onClick={() => setBoxVisible((visibility) => !visibility)}
           >
-            {visible ? (
+            {boxVisible ? (
               <Stack
                 direction="row"
                 alignItems="center"
