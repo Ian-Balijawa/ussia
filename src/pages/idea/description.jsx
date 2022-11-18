@@ -6,7 +6,7 @@ import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
-export const Description = () => {
+export default () => {
   const [visible, setVisible] = useState(false);
   const [description, setDescription] = useState('');
   console.log(description);

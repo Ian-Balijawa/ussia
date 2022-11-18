@@ -1,12 +1,10 @@
-import { Backspace, Plus, Rewind } from 'phosphor-react';
+import { Plus, Rewind } from 'phosphor-react';
 import { Box, Stack, Typography } from '@mui/material';
 
 import { Button } from '../../components/Button';
 import { COLORS } from '../../constants/colors';
-import { Input } from '../../components/Input';
-import { useState } from 'react';
 
-export const StrengthsAndWeaknesses = () => {
+export default () => {
   return (
     <Box
       sx={{

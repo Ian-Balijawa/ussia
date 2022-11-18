@@ -17,6 +17,10 @@ const ROUTES = {
   PODCASTS: path( ROOT, 'podcasts' ),
   COURSES: path( ROOT, 'courses' ),
   TOOLKIT: path( ROOT, 'toolkit' ),
+  IDEA: path( ROOT, 'idea' ),
+  IDEA_PITCH: path( 'idea', 'pitch' ),
+  IDEA_DESCRIPTION: path( 'idea', 'description' ),
+  IDEA_SW: path( 'idea', 'strengths-and-weaknesses' ),
   ALL: path( ROOT, '*' )
 };
 

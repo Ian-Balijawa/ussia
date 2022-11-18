@@ -6,7 +6,7 @@ import { Input } from '../../components/Input';
 import { Rewind } from 'phosphor-react';
 import { useState } from 'react';
 
-export const Pitch = () => {
+export default () => {
   const [uniqueness, setUniqueness] = useState('');
   const [offerComposition, setOfferComposition] = useState('');
   const [targetGroup, setTargetGroup] = useState('');

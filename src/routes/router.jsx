@@ -21,6 +21,11 @@ const EditPlan = Loadable(lazy(() => import('../pages/edit-plan')));
 const Videos = Loadable(lazy(() => import('../pages/videos')));
 const Tookit = Loadable(lazy(() => import('../pages/toolkit')));
 const Idea = Loadable(lazy(() => import('../pages/idea')));
+const Pitch = Loadable(lazy(() => import('../pages/idea/pitch')));
+const StrengthsAndWeaknesses = Loadable(
+  lazy(() => import('../pages/idea/strengths-and-weaknesses'))
+);
+const Description = Loadable(lazy(() => import('../pages/idea/description')));
 
 export default createBrowserRouter([
   {
@@ -40,8 +45,20 @@ export default createBrowserRouter([
     element: <CreatePlan />
   },
   {
-    path: 'idea',
+    path: ROUTES.IDEA,
     element: <Idea />
+  },
+  {
+    path: ROUTES.IDEA_PITCH,
+    element: <Pitch />
+  },
+  {
+    path: ROUTES.IDEA_DESCRIPTION,
+    element: <Description />
+  },
+  {
+    path: ROUTES.IDEA_SW,
+    element: <StrengthsAndWeaknesses />
   },
   {
     path: ROUTES.TO_WORK,
