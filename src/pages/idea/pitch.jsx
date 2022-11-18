@@ -22,8 +22,8 @@ export default () => {
     <Box
       sx={{
         padding: '1rem 2rem',
-        width: { sx: '100%', sm: '50%' },
-        height: '100vh'
+        // width: { sx: '100%', sm: '50%' },
+        margin: '1em auto'
       }}
       spacing={2}
     >

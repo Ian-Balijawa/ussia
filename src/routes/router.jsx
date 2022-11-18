@@ -26,6 +26,12 @@ const StrengthsAndWeaknesses = Loadable(
   lazy(() => import('../pages/idea/strengths-and-weaknesses'))
 );
 const Description = Loadable(lazy(() => import('../pages/idea/description')));
+const Strategy = Loadable(lazy(() => import('../pages/strategy')));
+const Mission = Loadable(lazy(() => import('../pages/strategy/mission')));
+const Vision = Loadable(lazy(() => import('../pages/strategy/vision')));
+const ActionPlan = Loadable(
+  lazy(() => import('../pages/strategy/action-plan'))
+);
 
 export default createBrowserRouter([
   {
@@ -59,6 +65,22 @@ export default createBrowserRouter([
   {
     path: ROUTES.IDEA_SW,
     element: <StrengthsAndWeaknesses />
+  },
+  {
+    path: ROUTES.STRATEGY,
+    element: <Strategy />
+  },
+  {
+    path: ROUTES.STRATEGY_MISSION,
+    element: <Mission />
+  },
+  {
+    path: ROUTES.STRATEGY_VISION,
+    element: <Vision />
+  },
+  {
+    path: ROUTES.STRATEGY_ACTION_PLAN,
+    element: <ActionPlan />
   },
   {
     path: ROUTES.TO_WORK,

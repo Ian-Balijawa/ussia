@@ -78,7 +78,7 @@ export default () => {
                   as="button"
                   color="secondary"
                   size="md"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                  src="https://avatars.githubusercontent.com/u/49788350?v=4"
                 />
               </Dropdown.Trigger>
             </Navbar.Item>

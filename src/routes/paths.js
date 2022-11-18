@@ -21,6 +21,10 @@ const ROUTES = {
   IDEA_PITCH: path( 'idea', 'pitch' ),
   IDEA_DESCRIPTION: path( 'idea', 'description' ),
   IDEA_SW: path( 'idea', 'strengths-and-weaknesses' ),
+  STRATEGY: path( ROOT, 'strategy' ),
+  STRATEGY_VISION: path( 'strategy', 'vision' ),
+  STRATEGY_MISSION: path( 'strategy', 'mission' ),
+  STRATEGY_ACTION_PLAN: path( 'strategy', 'action-plan' ),
   ALL: path( ROOT, '*' )
 };
 

@@ -11,7 +11,14 @@ export default () => {
   const [description, setDescription] = useState('');
   console.log(description);
   return (
-    <Box sx={{ padding: '1rem 2rem' }} spacing={2}>
+    <Box
+      spacing={2}
+      sx={{
+        padding: '1rem 2rem',
+        // width: { sx: '100%', sm: '50%' },
+        margin: '1em auto'
+      }}
+    >
       <Stack
         direction="row"
         alignItems="center"
