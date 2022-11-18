@@ -1,26 +1,29 @@
 import './index.css';
 
+import { BrowserRouter, RouterProvider } from 'react-router-dom';
+
 import AppRouter from './App';
+import { CollapsibleContextProvider } from './context/collapsible';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout/Layout';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import React from 'react';
-import { RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
-import { CollapsibleContextProvider } from './context/collapsible';
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <ProSidebarProvider>
-        <CollapsibleContextProvider>
-          <Layout>
-            <RouterProvider router={AppRouter} />
-          </Layout>
-        </CollapsibleContextProvider>
-      </ProSidebarProvider>
+      <BrowserRouter>
+        <ProSidebarProvider>
+          <CollapsibleContextProvider>
+            <Layout>
+              <AppRouter />
+            </Layout>
+          </CollapsibleContextProvider>
+        </ProSidebarProvider>
+      </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>
 );

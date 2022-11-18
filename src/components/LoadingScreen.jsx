@@ -4,7 +4,7 @@ export default () => {
   return (
     <Stack
       justifyContent="center"
-      width="100%"
+      width="100vh"
       height="100vh"
       alignItems="center"
     >

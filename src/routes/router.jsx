@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { Navigate, createBrowserRouter, useRoutes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
 import LoadingScreen from '../components/LoadingScreen';
@@ -33,77 +33,79 @@ const ActionPlan = Loadable(
   lazy(() => import('../pages/strategy/action-plan'))
 );
 
-export default createBrowserRouter([
-  {
-    path: ROUTES.ROOT,
-    element: <Home />
-  },
-  {
-    path: ROUTES.SIGNIN,
-    element: <SignIn />
-  },
-  {
-    path: ROUTES.SIGNUP,
-    element: <SignUp />
-  },
-  {
-    path: ROUTES.CREATE,
-    element: <CreatePlan />
-  },
-  {
-    path: ROUTES.IDEA,
-    element: <Idea />
-  },
-  {
-    path: ROUTES.IDEA_PITCH,
-    element: <Pitch />
-  },
-  {
-    path: ROUTES.IDEA_DESCRIPTION,
-    element: <Description />
-  },
-  {
-    path: ROUTES.IDEA_SW,
-    element: <StrengthsAndWeaknesses />
-  },
-  {
-    path: ROUTES.STRATEGY,
-    element: <Strategy />
-  },
-  {
-    path: ROUTES.STRATEGY_MISSION,
-    element: <Mission />
-  },
-  {
-    path: ROUTES.STRATEGY_VISION,
-    element: <Vision />
-  },
-  {
-    path: ROUTES.STRATEGY_ACTION_PLAN,
-    element: <ActionPlan />
-  },
-  {
-    path: ROUTES.TO_WORK,
-    element: <ToWork />
-  },
-  {
-    path: ROUTES.EDIT_PLAN,
-    element: <EditPlan />
-  },
-  {
-    path: ROUTES.VIDEOS,
-    element: <Videos />
-  },
-  {
-    path: ROUTES.TOOLKIT,
-    element: <Tookit />
-  },
-  {
-    path: ROUTES.NOT_FOUND,
-    element: <NotFound />
-  },
-  {
-    path: ROUTES.ALL,
-    element: <Navigate to={ROUTES.NOT_FOUND} />
-  }
-]);
+export default () => {
+  return useRoutes([
+    {
+      path: ROUTES.ROOT,
+      element: <Home />
+    },
+    {
+      path: ROUTES.SIGNIN,
+      element: <SignIn />
+    },
+    {
+      path: ROUTES.SIGNUP,
+      element: <SignUp />
+    },
+    {
+      path: ROUTES.CREATE,
+      element: <CreatePlan />
+    },
+    {
+      path: ROUTES.IDEA,
+      element: <Idea />
+    },
+    {
+      path: ROUTES.IDEA_PITCH,
+      element: <Pitch />
+    },
+    {
+      path: ROUTES.IDEA_DESCRIPTION,
+      element: <Description />
+    },
+    {
+      path: ROUTES.IDEA_SW,
+      element: <StrengthsAndWeaknesses />
+    },
+    {
+      path: ROUTES.STRATEGY,
+      element: <Strategy />
+    },
+    {
+      path: ROUTES.STRATEGY_MISSION,
+      element: <Mission />
+    },
+    {
+      path: ROUTES.STRATEGY_VISION,
+      element: <Vision />
+    },
+    {
+      path: ROUTES.STRATEGY_ACTION_PLAN,
+      element: <ActionPlan />
+    },
+    {
+      path: ROUTES.TO_WORK,
+      element: <ToWork />
+    },
+    {
+      path: ROUTES.EDIT_PLAN,
+      element: <EditPlan />
+    },
+    {
+      path: ROUTES.VIDEOS,
+      element: <Videos />
+    },
+    {
+      path: ROUTES.TOOLKIT,
+      element: <Tookit />
+    },
+    {
+      path: ROUTES.NOT_FOUND,
+      element: <NotFound />
+    },
+    {
+      path: ROUTES.ALL,
+      element: <Navigate to={ROUTES.NOT_FOUND} />
+    }
+  ]);
+};
