@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import ContentCard from '../components/Cards/ContentCard';
 import Grid from '@mui/material/Grid';
 import Logo from '../assets/svgs/Logo.svg';
-import { Stack } from '@mui/material';
 import { useEffect } from 'react';
 
 export default () => {
@@ -78,16 +77,11 @@ export default () => {
     }
   ];
   return (
-    <Box
-      sx={{
-        flexGrow: 1
-        // margin: '2em'
-      }}
-    >
+    <Box sx={{ flexGrow: 1 }}>
       <Grid
         container
-        // spacing={{ xs: 2, md: 4 }}
-        // columns={{ xs: 4, sm: 8, md: 12 }}
+        spacing={{ xs: 1, md: 2 }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {phases.map((phase) => (
           <Grid item xs={2} sm={4} md={4} key={phase.title}>

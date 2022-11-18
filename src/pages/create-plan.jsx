@@ -23,7 +23,9 @@ export default () => {
         justifyContent="space-around"
         width="100vw"
         height="100vh"
-        sx={{}}
+        sx={{
+          margin: '3rem'
+        }}
       >
         <Image
           width={520}

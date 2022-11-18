@@ -55,39 +55,3 @@ export default ({ videoInfo }) => {
     </Stack>
   );
 };
-
-//
-
-{
-  /* <Card sx={{ maxWidth: 345 }}>
-      <iframe
-        width="100%"
-        height="315"
-        src={src}
-        title={title}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/ZwKhufmMxko"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-      <CardContent>
-        <Stack direction="row">
-          {tags.map((tag) => (
-            <Button auto color="primary">
-              {tag}
-            </Button>
-          ))}
-        </Stack>
-        <Typography variant="body2" color="text.secondary">
-          {description}
-        </Typography>
-      </CardContent>
-    </Card> */
-}
-//
