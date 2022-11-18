@@ -14,9 +14,13 @@ const Loadable = (Component) => (props) => {
 const SignIn = Loadable(lazy(() => import('../pages/signin')));
 const Home = Loadable(lazy(() => import('../pages/home')));
 const SignUp = Loadable(lazy(() => import('../pages/signup')));
-const CreateProfile = Loadable(lazy(() => import('../pages/create-plan')));
+const CreatePlan = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
 const ToWork = Loadable(lazy(() => import('../pages/to-work')));
+const EditPlan = Loadable(lazy(() => import('../pages/edit-plan')));
+const Videos = Loadable(lazy(() => import('../pages/videos')));
+const Tookit = Loadable(lazy(() => import('../pages/toolkit')));
+const Idea = Loadable(lazy(() => import('../pages/idea')));
 
 export default createBrowserRouter([
   {
@@ -32,12 +36,28 @@ export default createBrowserRouter([
     element: <SignUp />
   },
   {
-    path: ROUTES.CREATE_PLAN,
-    element: <CreateProfile />
+    path: ROUTES.CREATE,
+    element: <CreatePlan />
+  },
+  {
+    path: 'idea',
+    element: <Idea />
   },
   {
     path: ROUTES.TO_WORK,
     element: <ToWork />
+  },
+  {
+    path: ROUTES.EDIT_PLAN,
+    element: <EditPlan />
+  },
+  {
+    path: ROUTES.VIDEOS,
+    element: <Videos />
+  },
+  {
+    path: ROUTES.TOOLKIT,
+    element: <Tookit />
   },
   {
     path: ROUTES.NOT_FOUND,

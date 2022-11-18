@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   background-color: ${COLORS.PRIMARY};
-  color: ${COLORS.SECONDARY};
-  border-radius: 5px;
+  color: #fff;
+  border-radius: 10px;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1em;
+  padding: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;

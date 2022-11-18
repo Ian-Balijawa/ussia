@@ -4,7 +4,7 @@ import { COLORS } from '../constants/colors';
 import { CustomModal } from '../components/Modal';
 import { Image } from '@nextui-org/react';
 import PlanForm from '../components/PlanForm';
-import starterImg from '../assets/starters.png';
+import starterImg from '../assets/images/starters.png';
 import { useState } from 'react';
 
 export default () => {
@@ -23,7 +23,9 @@ export default () => {
         justifyContent="space-around"
         width="100vw"
         height="100vh"
-        sx={{}}
+        sx={{
+          margin: '3rem'
+        }}
       >
         <Image
           width={520}

@@ -1,7 +1,7 @@
 import { Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
-import { CustomModal } from './../Modal';
+import { CustomModal } from '../Modal';
 import PlanForm from '../PlanForm';
 import { useState } from 'react';
 
