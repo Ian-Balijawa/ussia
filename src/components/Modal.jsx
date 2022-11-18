@@ -53,7 +53,6 @@ export const CustomModal = ({ visible, closeHandler }) => {
               justifyContent: 'center',
               display: 'flex',
               borderRadius: '5px',
-              width: '100%',
               height: 'fit-content',
               cursor: 'pointer',
               '&:hover': {
