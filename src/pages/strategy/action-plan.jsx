@@ -7,7 +7,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
 export default () => {
-  const [visible, setVisible] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
+  const [boxVisible, setBoxVisible] = useState(false);
   const [description, setDescription] = useState('');
   console.log(description);
   return (
@@ -25,7 +26,7 @@ export default () => {
         sx={{ marginBottom: '1em' }}
         color={COLORS.SECONDARY}
       >
-        <Rewind size={32} /> Idea
+        <Rewind size={32} /> Strategy
       </Stack>
       <Box>
         <Typography
@@ -34,7 +35,7 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          Description
+          Action Plan
         </Typography>
         <Typography
           variant="body2"
@@ -42,14 +43,49 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          When do you know your idea is good? Tell your friends or family.
-          Explain how you want to market it. Do they understand you right away?
-          Then your description is clear. Do you notice that they are not with
-          your story? Ask why and what they are missing. Continue writing your
-          idea until the whole story is correct.
+          You have already set a clear goal and a clear vision for the future.
+          Now describe in your action plan how you will propagate that mission
+          and vision in your company, how you will achieve your goals.s?" . Also
+          think about where you are working towards with your company.
+        </Typography>
+        {textVisible ? (
+          <Typography variant="body2" textAlign="left">
+            Also describe what the most important assets are to attract and
+            retain customers: how do you distinguish yourself from your
+            competitors?
+          </Typography>
+        ) : null}
+        <Typography
+          variant="body2"
+          color={COLORS.PRIMARY}
+          sx={{ cursor: 'pointer', margin: '1em 0' }}
+          textAlign="left"
+          onClick={() => setTextVisible((visibility) => !visibility)}
+        >
+          {textVisible ? (
+            <Stack
+              direction="row"
+              alignItems="center"
+              sx={{ marginBottom: '1em', width: '10%' }}
+              color={COLORS.PRIMARY}
+              spacing={1}
+            >
+              <Eye size={16} /> Less Info
+            </Stack>
+          ) : (
+            <Stack
+              direction="row"
+              alignItems="center"
+              sx={{ marginBottom: '1em' }}
+              color={COLORS.PRIMARY}
+              spacing={1}
+            >
+              <Eye size={16} /> More Info
+            </Stack>
+          )}
         </Typography>
         <Box>
-          {visible ? (
+          {boxVisible ? (
             <Box
               spacing={1}
               sx={{
@@ -64,17 +100,20 @@ export default () => {
                 textAlign="left"
                 sx={{ margin: '0.3em 0' }}
               >
-                This is how Edelweiss approached it:
+                Example of an already started company :
               </Typography>
               <Typography variant="body2" color={'#ffff'} textAlign="left">
-                I call my business a feel-good bar because I want to create a
-                place where everyone feels good and at home. This feel-good
-                moment is filled in a different way for everyone. For some, this
-                feel-good moment consists of picking up a juice in the store.
-                For others from stopping by and enjoying a fresh bowl of soup.
-                Another reason why I don't want to call my business a juice or
-                soup bar is because I don't want to be tied to a specific
-                product category.
+                provide a beautiful decoration of my institute, so that
+                customers who enter know that they end up in a professional
+                environment. posting on Facebook/Instagram where I mainly focus
+                on posts about skin improvement in order to build expertise;
+                speaking in the breast clinic; speaking at the fourty-one
+                (service club about the new trend in skin care, especially
+                epigenetics and possible skin problems); giving workshops about
+                facial care and the importance of proper care; word of mouth
+                advertising; I know someone who writes for a local newspaper,
+                I'm going to try and get an article on skin care for people with
+                cancer;
               </Typography>
             </Box>
           ) : null}
@@ -83,9 +122,9 @@ export default () => {
             color={COLORS.PRIMARY}
             sx={{ cursor: 'pointer', margin: '1em 0' }}
             textAlign="left"
-            onClick={() => setVisible((visibility) => !visibility)}
+            onClick={() => setBoxVisible((visibility) => !visibility)}
           >
-            {visible ? (
+            {boxVisible ? (
               <Stack
                 direction="row"
                 alignItems="center"

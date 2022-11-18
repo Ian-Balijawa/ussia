@@ -6,7 +6,7 @@ import { Input } from '../../components/Input';
 import { Rewind } from 'phosphor-react';
 import { useState } from 'react';
 
-export const Pitch = () => {
+export default () => {
   const [uniqueness, setUniqueness] = useState('');
   const [offerComposition, setOfferComposition] = useState('');
   const [targetGroup, setTargetGroup] = useState('');
@@ -22,8 +22,8 @@ export const Pitch = () => {
     <Box
       sx={{
         padding: '1rem 2rem',
-        width: { sx: '100%', sm: '50%' },
-        height: '100vh'
+        // width: { sx: '100%', sm: '50%' },
+        margin: '1em auto'
       }}
       spacing={2}
     >

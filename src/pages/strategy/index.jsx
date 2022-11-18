@@ -6,11 +6,11 @@ import PlanDetailsCard from '../../components/Cards/PlanDetailsCard';
 
 export default () => {
   const details = [
-    { title: 'Description', to: '/idea/description' },
-    { title: 'Pitch', to: '/idea/pitch' },
+    { title: 'Mission', to: '/strategy/mission' },
+    { title: 'Vision', to: '/strategy/vision' },
     {
-      title: 'Strengths and Weaknesses',
-      to: '/idea/strengths-and-weaknesses'
+      title: 'Action Plan',
+      to: '/strategy/action-plan'
     }
   ];
   return (
@@ -29,7 +29,7 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          Idea
+          Strategy
         </Typography>
         <Typography
           variant="body2"
@@ -37,9 +37,10 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          Do you have a desire to do business? Then it is now time to turn that
-          good idea into a punishment plan. Think about it carefully, because
-          this is where you build the foundation of your entire business plan.
+          If the story surrounding your company is correct, you will be
+          unstoppable. Therefore, invest sufficient time in developing your
+          mission, vision and action plan. It will help you to always make good
+          and well-considered choices.
         </Typography>
 
         <Box sx={{ flexGrow: 1 }}>

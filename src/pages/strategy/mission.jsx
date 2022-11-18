@@ -25,7 +25,7 @@ export default () => {
         sx={{ marginBottom: '1em' }}
         color={COLORS.SECONDARY}
       >
-        <Rewind size={32} /> Idea
+        <Rewind size={32} /> Strategy
       </Stack>
       <Box>
         <Typography
@@ -34,7 +34,7 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          Description
+          Mission
         </Typography>
         <Typography
           variant="body2"
@@ -42,41 +42,21 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          When do you know your idea is good? Tell your friends or family.
-          Explain how you want to market it. Do they understand you right away?
-          Then your description is clear. Do you notice that they are not with
-          your story? Ask why and what they are missing. Continue writing your
-          idea until the whole story is correct.
+          Your mission is pretty much the foundation of everything you do. It's
+          why you started. It should inspire your (potential) customers and
+          encourage them to purchase your product or service.
         </Typography>
         <Box>
           {visible ? (
-            <Box
-              spacing={1}
-              sx={{
-                background: COLORS.SECONDARY,
-                padding: '1rem',
-                borderRadius: '5px'
-              }}
-            >
-              <Typography
-                variant="h6"
-                color={'#ffff'}
-                textAlign="left"
-                sx={{ margin: '0.3em 0' }}
-              >
-                This is how Edelweiss approached it:
-              </Typography>
-              <Typography variant="body2" color={'#ffff'} textAlign="left">
-                I call my business a feel-good bar because I want to create a
-                place where everyone feels good and at home. This feel-good
-                moment is filled in a different way for everyone. For some, this
-                feel-good moment consists of picking up a juice in the store.
-                For others from stopping by and enjoying a fresh bowl of soup.
-                Another reason why I don't want to call my business a juice or
-                soup bar is because I don't want to be tied to a specific
-                product category.
-              </Typography>
-            </Box>
+            <Typography variant="body2" textAlign="left">
+              Your mission statement shows why you do what you do . It therefore
+              determines the course of your company. Without a well-defined
+              mission, vision and strategy, your company is out of control and
+              you will take actions that are not in line with your long-term
+              goal. With your mission you know how to convince potential
+              partners, investors, employees and other stakeholders to work with
+              your company.
+            </Typography>
           ) : null}
           <Typography
             variant="body2"
@@ -93,7 +73,7 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> Hide example
+                <Eye size={16} /> Less Info
               </Stack>
             ) : (
               <Stack
@@ -103,11 +83,19 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> Show example
+                <Eye size={16} /> More Info
               </Stack>
             )}
           </Typography>
           <Box>
+            <Typography
+              variant="body2"
+              color={COLORS.SECONDARY}
+              textAlign="left"
+              sx={{ marginBottom: '1em' }}
+            >
+              Mission
+            </Typography>
             <MDEditor
               value={description}
               onChange={setDescription}

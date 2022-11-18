@@ -1,18 +1,16 @@
-import { Backspace, Plus, Rewind } from 'phosphor-react';
 import { Box, Stack, Typography } from '@mui/material';
+import { Plus, Rewind } from 'phosphor-react';
 
 import { Button } from '../../components/Button';
 import { COLORS } from '../../constants/colors';
-import { Input } from '../../components/Input';
-import { useState } from 'react';
 
-export const StrengthsAndWeaknesses = () => {
+export default () => {
   return (
     <Box
       sx={{
         padding: '1rem 2rem',
-        width: { sx: '100%', sm: '50%' },
-        height: '100vh'
+        // width: { sx: '100%', sm: '50%' },
+        margin: '1em auto'
       }}
       spacing={2}
     >

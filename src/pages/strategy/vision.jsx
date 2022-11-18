@@ -7,7 +7,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
 export default () => {
-  const [visible, setVisible] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
+  const [boxVisible, setBoxVisible] = useState(false);
   const [description, setDescription] = useState('');
   console.log(description);
   return (
@@ -25,7 +26,7 @@ export default () => {
         sx={{ marginBottom: '1em' }}
         color={COLORS.SECONDARY}
       >
-        <Rewind size={32} /> Idea
+        <Rewind size={32} /> Strategy
       </Stack>
       <Box>
         <Typography
@@ -34,7 +35,7 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          Description
+          Vision
         </Typography>
         <Typography
           variant="body2"
@@ -42,14 +43,51 @@ export default () => {
           textAlign="left"
           sx={{ marginBottom: '1em' }}
         >
-          When do you know your idea is good? Tell your friends or family.
-          Explain how you want to market it. Do they understand you right away?
-          Then your description is clear. Do you notice that they are not with
-          your story? Ask why and what they are missing. Continue writing your
-          idea until the whole story is correct.
+          Your vision shows where you want to grow, ask yourself the following
+          question: "What will my life look like in 5 years?" . Also think about
+          where you are working towards with your company.
+        </Typography>
+        {textVisible ? (
+          <Typography variant="body2" textAlign="left">
+            Your vision describes where you see yourself within a number of
+            years . Usually we keep in mind a time span of 3 to 5 years. A
+            vision is a measurable objective and it plays a crucial role in the
+            direction of your company. So your vision describes what you want to
+            achieve, while your strategy determines what you need to do to get
+            there.
+          </Typography>
+        ) : null}
+        <Typography
+          variant="body2"
+          color={COLORS.PRIMARY}
+          sx={{ cursor: 'pointer', margin: '1em 0' }}
+          textAlign="left"
+          onClick={() => setTextVisible((visibility) => !visibility)}
+        >
+          {textVisible ? (
+            <Stack
+              direction="row"
+              alignItems="center"
+              sx={{ marginBottom: '1em', width: '10%' }}
+              color={COLORS.PRIMARY}
+              spacing={1}
+            >
+              <Eye size={16} /> Less Info
+            </Stack>
+          ) : (
+            <Stack
+              direction="row"
+              alignItems="center"
+              sx={{ marginBottom: '1em' }}
+              color={COLORS.PRIMARY}
+              spacing={1}
+            >
+              <Eye size={16} /> More Info
+            </Stack>
+          )}
         </Typography>
         <Box>
-          {visible ? (
+          {boxVisible ? (
             <Box
               spacing={1}
               sx={{
@@ -64,17 +102,19 @@ export default () => {
                 textAlign="left"
                 sx={{ margin: '0.3em 0' }}
               >
-                This is how Edelweiss approached it:
+                Example of an already started company :
               </Typography>
               <Typography variant="body2" color={'#ffff'} textAlign="left">
-                I call my business a feel-good bar because I want to create a
-                place where everyone feels good and at home. This feel-good
-                moment is filled in a different way for everyone. For some, this
-                feel-good moment consists of picking up a juice in the store.
-                For others from stopping by and enjoying a fresh bowl of soup.
-                Another reason why I don't want to call my business a juice or
-                soup bar is because I don't want to be tied to a specific
-                product category.
+                Long term vision: After 1 year: from secondary occupation to
+                main occupation with a minimum NBI of 1500 euros per month After
+                1.5 years: introduction make-up line After 2 years: introduction
+                of 2nd care line After 3 years: opening of 2nd case After 5
+                years: expanding the first business with a wellness area
+                Short-term vision: Q1: customer portfolio *150%, of which 20%
+                regular customers. Q2: customer portfolio *150%, of which 25%
+                regular customers. Q3: be able to get the first wage of minimum
+                800 euros NBI from the business. Q4: Care line sales must be at
+                least 30% of my turnover
               </Typography>
             </Box>
           ) : null}
@@ -83,9 +123,9 @@ export default () => {
             color={COLORS.PRIMARY}
             sx={{ cursor: 'pointer', margin: '1em 0' }}
             textAlign="left"
-            onClick={() => setVisible((visibility) => !visibility)}
+            onClick={() => setBoxVisible((visibility) => !visibility)}
           >
-            {visible ? (
+            {boxVisible ? (
               <Stack
                 direction="row"
                 alignItems="center"
