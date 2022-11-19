@@ -32,7 +32,7 @@ export default () => {
     {
       name: 'Tools for Starters',
       image: toolkit,
-      link: 'toolkit'
+      link: '/toolkit'
     },
     {
       name: 'Podcasts',
@@ -220,7 +220,12 @@ export default () => {
           </Stack>
           <Stack direction="column" justifyContent="space-between">
             {cardInfo.map((item) => (
-              <FeatureCard key={item} name={item.name} imagesrc={item.image} />
+              <FeatureCard
+                key={item.name}
+                link={item.link}
+                name={item.name}
+                imagesrc={item.image}
+              />
             ))}
           </Stack>
         </Stack>

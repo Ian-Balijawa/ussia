@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
+
 import ToolkitCard from '../components/Cards/ToolkitCard';
 
 export default () => {
@@ -12,13 +13,36 @@ export default () => {
     }
   ];
   return (
-    <Box padding="1rem" sx={{ margin: '2rem auto' }}>
+    <Stack
+      padding="1rem"
+      sx={{ margin: '2rem auto', width: '100vw' }}
+      justifyContent="center"
+      alignItems="center"
+    >
       <ToolkitCard
         src={toolkits[0].src}
         title={toolkits[0].title}
         tags={toolkits[0].tags}
         description={toolkits[0].description}
       />
-    </Box>
+      <ToolkitCard
+        src={toolkits[0].src}
+        title={toolkits[0].title}
+        tags={toolkits[0].tags}
+        description={toolkits[0].description}
+      />
+      <ToolkitCard
+        src={toolkits[0].src}
+        title={toolkits[0].title}
+        tags={toolkits[0].tags}
+        description={toolkits[0].description}
+      />
+      <ToolkitCard
+        src={toolkits[0].src}
+        title={toolkits[0].title}
+        tags={toolkits[0].tags}
+        description={toolkits[0].description}
+      />
+    </Stack>
   );
 };

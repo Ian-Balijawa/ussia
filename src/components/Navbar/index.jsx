@@ -1,10 +1,7 @@
 import { Avatar, Dropdown, Link, Navbar, Text } from '@nextui-org/react';
 
-import { CollapsibleContext } from '../../context/collapsible';
 import { Layout } from './Layout';
-import { List } from 'phosphor-react';
-import { Stack } from '@mui/material';
-import { useContext } from 'react';
+import { ROUTES } from '../../routes/paths';
 
 export default () => {
   const collapseItems = [
@@ -18,8 +15,6 @@ export default () => {
     'Contact'
   ];
 
-  const { collapseSidebar } = useContext(CollapsibleContext);
-
   return (
     <Layout>
       <Navbar isBordered variant="sticky">
@@ -31,9 +26,6 @@ export default () => {
             }
           }}
         >
-          <Stack sx={{ cursor: 'pointer' }}>
-            <List size={32} onClick={() => collapseSidebar()} />
-          </Stack>
           <Navbar.Content
             enableCursorHighlight
             activeColor="secondary"
@@ -43,10 +35,10 @@ export default () => {
             <Navbar.Link isActive href="#">
               Business Plan
             </Navbar.Link>
-            <Navbar.Link href="#">Videos</Navbar.Link>
-            <Navbar.Link href="#">Toolkit</Navbar.Link>
-            <Navbar.Link href="#">Podcasts</Navbar.Link>
-            <Navbar.Link href="#">Courses</Navbar.Link>
+            <Navbar.Link href={ROUTES.VIDEOS}>Videos</Navbar.Link>
+            <Navbar.Link href={ROUTES.TOOLKIT}>Toolkit</Navbar.Link>
+            <Navbar.Link href={ROUTES.PODCASTS}>Podcasts</Navbar.Link>
+            <Navbar.Link href={ROUTES.COURSES}>Courses</Navbar.Link>
           </Navbar.Content>
         </Navbar.Brand>
 

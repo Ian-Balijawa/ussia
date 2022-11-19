@@ -4,6 +4,7 @@ import { Button } from '../../components/Button';
 import { COLORS } from '../../constants/colors';
 import { Input } from '../../components/Input';
 import { Rewind } from 'phosphor-react';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export default () => {
@@ -11,7 +12,7 @@ export default () => {
   const [offerComposition, setOfferComposition] = useState('');
   const [targetGroup, setTargetGroup] = useState('');
   const [expectations, setExpecations] = useState('');
-
+  const navigator = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -30,10 +31,15 @@ export default () => {
       <Stack
         direction="row"
         alignItems="center"
-        sx={{ marginBottom: '1em' }}
+        justifyContent="space-between"
+        sx={{ marginBottom: '1em', cursor: 'pointer', color: COLORS.PRIMARY }}
         color={COLORS.SECONDARY}
+        onClick={() => navigator('/idea')}
+        spacing={4}
+        width="6%"
       >
-        <Rewind size={32} /> Idea
+        <Rewind size={32} />
+        Idea
       </Stack>
       <Box>
         <Typography
