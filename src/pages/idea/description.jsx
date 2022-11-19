@@ -4,28 +4,33 @@ import { Eye, Rewind } from 'phosphor-react';
 import { COLORS } from '../../constants/colors';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from 'rehype-sanitize';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export default () => {
   const [visible, setVisible] = useState(false);
   const [description, setDescription] = useState('');
-  console.log(description);
+  const navigator = useNavigate();
   return (
     <Box
       spacing={2}
       sx={{
         padding: '1rem 2rem',
-        // width: { sx: '100%', sm: '50%' },
         margin: '1em auto'
       }}
     >
       <Stack
         direction="row"
         alignItems="center"
-        sx={{ marginBottom: '1em' }}
+        justifyContent="space-between"
+        sx={{ marginBottom: '1em', cursor: 'pointer', color: COLORS.PRIMARY }}
         color={COLORS.SECONDARY}
+        onClick={() => navigator('/idea')}
+        spacing={4}
+        width="6%"
       >
-        <Rewind size={32} /> Idea
+        <Rewind size={32} />
+        Idea
       </Stack>
       <Box>
         <Typography

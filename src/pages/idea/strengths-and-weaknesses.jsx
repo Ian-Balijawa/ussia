@@ -3,8 +3,10 @@ import { Plus, Rewind } from 'phosphor-react';
 
 import { Button } from '../../components/Button';
 import { COLORS } from '../../constants/colors';
+import { useNavigate } from 'react-router-dom';
 
 export default () => {
+  const navigator = useNavigate();
   return (
     <Box
       sx={{
@@ -17,8 +19,12 @@ export default () => {
       <Stack
         direction="row"
         alignItems="center"
-        sx={{ marginBottom: '1em' }}
+        justifyContent="space-between"
+        sx={{ marginBottom: '1em', cursor: 'pointer', color: COLORS.PRIMARY }}
         color={COLORS.SECONDARY}
+        onClick={() => navigator('/idea')}
+        spacing={4}
+        width="6%"
       >
         <Rewind size={32} />
         Idea

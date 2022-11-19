@@ -24,7 +24,7 @@ const ROUTES = {
   PEOPLE_AND_ORGANISATION: '/people-and-organisation',
   MARKETING: '/marketing',
   FINANCIAL: '/financial',
-  START_UP: '/start-up',
+  STARTUP: '/startup',
   ALL: '*',
 };
 

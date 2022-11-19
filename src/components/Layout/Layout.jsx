@@ -18,8 +18,6 @@ import { ROUTES } from '../../routes/paths';
 import React from 'react';
 
 export default ({ children }) => {
-  const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
-    useProSidebar();
   return (
     <React.Fragment>
       <Navbar />
@@ -37,21 +35,18 @@ export default ({ children }) => {
               routerLink={<Link to={ROUTES.IDEA} />}
               icon={<Sun size={32} />}
             >
-              {' '}
               Idea
             </MenuItem>
             <MenuItem
               routerLink={<Link to={ROUTES.STRATEGY} />}
               icon={<Horse size={32} />}
             >
-              {' '}
               strategy
             </MenuItem>
             <MenuItem
               routerLink={<Link to={ROUTES.MARKET_ANALYSIS} />}
               icon={<ChartLineUp size={32} />}
             >
-              {' '}
               Market Analysis
             </MenuItem>
             <MenuItem
@@ -64,21 +59,18 @@ export default ({ children }) => {
               routerLink={<Link to={ROUTES.MARKETING} />}
               icon={<Megaphone size={32} />}
             >
-              {' '}
               Marketing{' '}
             </MenuItem>
             <MenuItem
               routerLink={<Link to={ROUTES.FINANCIAL} />}
               icon={<CurrencyDollar size={32} />}
             >
-              {' '}
               Financial{' '}
             </MenuItem>
             <MenuItem
-              routerLink={<Link to={ROUTES.START_UP} />}
+              routerLink={<Link to={ROUTES.STARTUP} />}
               icon={<ProjectorScreenChart size={32} />}
             >
-              {' '}
               Start up{' '}
             </MenuItem>
           </Menu>

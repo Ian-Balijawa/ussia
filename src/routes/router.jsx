@@ -46,6 +46,8 @@ const Marketing = Loadable(lazy(() => import('../pages/marketing')));
 
 const Financial = Loadable(lazy(() => import('../pages/financial')));
 
+const Startup = Loadable(lazy(() => import('../pages/startup')));
+
 export default () => {
   return useRoutes([
     {
@@ -135,6 +137,10 @@ export default () => {
     {
       path: ROUTES.FINANCIAL,
       element: <Financial />
+    },
+    {
+      path: ROUTES.STARTUP,
+      element: <Startup />
     },
     {
       path: ROUTES.NOT_FOUND,
