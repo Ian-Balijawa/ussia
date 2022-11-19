@@ -20,8 +20,8 @@ export default () => {
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         alignItems="center"
-        justifyContent="space-around"
-        width="100vw"
+        justifyContent="center"
+        width="80vw"
         height="100vh"
         sx={{
           margin: '3rem'
@@ -33,10 +33,20 @@ export default () => {
           src={starterImg}
           alt="Default Image"
           objectFit="cover"
+          style={{ display: { xs: 'block', sm: 'none' }, margin: 'auto' }}
         />
 
-        <Stack direction="column" width="50%">
-          <Typography variant="h5" textAlign="center" color={COLORS.SECONDARY}>
+        <Stack
+          direction={{ xs: 'row', sm: 'column' }}
+          alignItems="center"
+          width="100%"
+        >
+          <Typography
+            variant="h5"
+            textAlign="center"
+            color={COLORS.SECONDARY}
+            display={{ xs: 'none', sm: 'block' }}
+          >
             Your business plans
           </Typography>
           <Stack

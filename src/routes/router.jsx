@@ -32,12 +32,45 @@ const Vision = Loadable(lazy(() => import('../pages/strategy/vision')));
 const ActionPlan = Loadable(
   lazy(() => import('../pages/strategy/action-plan'))
 );
+const Podcast = Loadable(lazy(() => import('../pages/podcast')));
+const MarketAnalysis = Loadable(lazy(() => import('../pages/market-analysis')));
+const TargetGroupDetermination = Loadable(
+  lazy(() => import('../pages/market-analysis/target-group-determination'))
+);
+
+const PeopleAndOrganisation = Loadable(
+  lazy(() => import('../pages/people-and-organisation'))
+);
+
+const Marketing = Loadable(lazy(() => import('../pages/marketing')));
+
+const Financial = Loadable(lazy(() => import('../pages/financial')));
 
 export default () => {
   return useRoutes([
     {
       path: ROUTES.ROOT,
-      element: <Home />
+      element: <ToWork />
+    },
+    {
+      path: ROUTES.TO_WORK,
+      element: <ToWork />
+    },
+    {
+      path: ROUTES.EDIT_PLAN,
+      element: <EditPlan />
+    },
+    {
+      path: ROUTES.PODCASTS,
+      element: <Podcast />
+    },
+    {
+      path: ROUTES.VIDEOS,
+      element: <Videos />
+    },
+    {
+      path: ROUTES.TOOLKIT,
+      element: <Tookit />
     },
     {
       path: ROUTES.SIGNIN,
@@ -84,20 +117,24 @@ export default () => {
       element: <ActionPlan />
     },
     {
-      path: ROUTES.TO_WORK,
-      element: <ToWork />
+      path: ROUTES.MARKET_ANALYSIS,
+      element: <MarketAnalysis />
     },
     {
-      path: ROUTES.EDIT_PLAN,
-      element: <EditPlan />
+      path: ROUTES.TARGET_GROUP_DETERMINATION,
+      element: <TargetGroupDetermination />
     },
     {
-      path: ROUTES.VIDEOS,
-      element: <Videos />
+      path: ROUTES.PEOPLE_AND_ORGANISATION,
+      element: <PeopleAndOrganisation />
     },
     {
-      path: ROUTES.TOOLKIT,
-      element: <Tookit />
+      path: ROUTES.MARKETING,
+      element: <Marketing />
+    },
+    {
+      path: ROUTES.FINANCIAL,
+      element: <Financial />
     },
     {
       path: ROUTES.NOT_FOUND,

@@ -1,31 +1,31 @@
-function path ( root, sublink ) {
-  return sublink === '*' ? sublink : `${root}/${sublink}`;
-}
-
-const ROOT = '/';
-
 const ROUTES = {
-  ROOT,
-  SIGNIN: path( ROOT, 'signin' ),
-  SIGNUP: path( ROOT, 'signup' ),
-  NOT_FOUND: path( ROOT, '404' ),
-  CREATE: path( ROOT, 'create' ),
-  PLAN: path( ROOT, 'plan' ),
-  TO_WORK: path( ROOT, 'to-work' ),
-  EDIT_PLAN: path( ROOT, 'edit-plan' ),
-  VIDEOS: path( ROOT, 'videos' ),
-  PODCASTS: path( ROOT, 'podcasts' ),
-  COURSES: path( ROOT, 'courses' ),
-  TOOLKIT: path( ROOT, 'toolkit' ),
-  IDEA: path( ROOT, 'idea' ),
-  IDEA_PITCH: path( 'idea', 'pitch' ),
-  IDEA_DESCRIPTION: path( 'idea', 'description' ),
-  IDEA_SW: path( 'idea', 'strengths-and-weaknesses' ),
-  STRATEGY: path( ROOT, 'strategy' ),
-  STRATEGY_VISION: path( 'strategy', 'vision' ),
-  STRATEGY_MISSION: path( 'strategy', 'mission' ),
-  STRATEGY_ACTION_PLAN: path( 'strategy', 'action-plan' ),
-  ALL: path( ROOT, '*' )
+  ROOT: "/",
+  SIGNIN: '/signin',
+  SIGNUP: '/signup',
+  NOT_FOUND: '/404',
+  CREATE: '/create',
+  PLAN: '/plan',
+  TO_WORK: '/to-work',
+  EDIT_PLAN: '/edit-plan',
+  VIDEOS: '/videos',
+  PODCASTS: '/podcasts',
+  COURSES: '/courses',
+  TOOLKIT: '/toolkit',
+  IDEA: '/idea',
+  IDEA_PITCH: '/idea/pitch',
+  IDEA_DESCRIPTION: '/idea/description',
+  IDEA_SW: '/idea/strengths-and-weaknesses',
+  STRATEGY: '/strategy',
+  STRATEGY_VISION: '/strategy/vision',
+  STRATEGY_MISSION: '/strategy/mission',
+  STRATEGY_ACTION_PLAN: '/strategy/action-plan',
+  MARKET_ANALYSIS: '/market-analysis',
+  TARGET_GROUP_DETERMINATION: '/target-group-determination',
+  PEOPLE_AND_ORGANISATION: '/people-and-organisation',
+  MARKETING: '/marketing',
+  FINANCIAL: '/financial',
+  START_UP: '/start-up',
+  ALL: '*',
 };
 
 export { ROUTES };

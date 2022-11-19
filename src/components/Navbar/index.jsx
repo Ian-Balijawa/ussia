@@ -3,6 +3,7 @@ import { Avatar, Dropdown, Link, Navbar, Text } from '@nextui-org/react';
 import { CollapsibleContext } from '../../context/collapsible';
 import { Layout } from './Layout';
 import { List } from 'phosphor-react';
+import { ROUTES } from '../../routes/paths';
 import { Stack } from '@mui/material';
 import { useContext } from 'react';
 
@@ -43,10 +44,10 @@ export default () => {
             <Navbar.Link isActive href="#">
               Business Plan
             </Navbar.Link>
-            <Navbar.Link href="#">Videos</Navbar.Link>
-            <Navbar.Link href="#">Toolkit</Navbar.Link>
-            <Navbar.Link href="#">Podcasts</Navbar.Link>
-            <Navbar.Link href="#">Courses</Navbar.Link>
+            <Navbar.Link href={ROUTES.VIDEOS}>Videos</Navbar.Link>
+            <Navbar.Link href={ROUTES.TOOLKIT}>Toolkit</Navbar.Link>
+            <Navbar.Link href={ROUTES.PODCASTS}>Podcasts</Navbar.Link>
+            <Navbar.Link href={ROUTES.COURSES}>Courses</Navbar.Link>
           </Navbar.Content>
         </Navbar.Brand>
 
