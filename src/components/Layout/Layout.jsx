@@ -3,6 +3,7 @@ import {
   Clock,
   CurrencyDollar,
   Horse,
+  List,
   Megaphone,
   ProjectorScreenChart,
   SquaresFour,
@@ -10,14 +11,16 @@ import {
   VideoCamera
 } from 'phosphor-react';
 import { Menu, MenuItem, Sidebar, useProSidebar } from 'react-pro-sidebar';
+import React, { useContext } from 'react';
 
+import { CollapsibleContext } from '../../context/collapsible';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import { ROUTES } from '../../routes/paths';
-import React from 'react';
 
 export default ({ children }) => {
+  const { collapseSidebar } = useContext(CollapsibleContext);
   return (
     <React.Fragment>
       <Navbar />
@@ -25,9 +28,15 @@ export default ({ children }) => {
         <Sidebar defaultCollapsed onClick={''}>
           <Menu>
             <MenuItem
+              onClick={() => collapseSidebar()}
+              routerLink={<Link to={ROUTES.ROOT} />}
+              icon={<List size={32} />}
+            >
+              Toggle Sidebar
+            </MenuItem>
+            <MenuItem
               routerLink={<Link to={ROUTES.ROOT} />}
               icon={<SquaresFour size={32} />}
-              active
             >
               Back to the Overview
             </MenuItem>
