@@ -24,11 +24,7 @@ export default ({ children }) => {
   return (
     <React.Fragment>
       <Navbar />
-<<<<<<< Updated upstream
       <div style={{ display: 'flex', height: '100%' }}>
-=======
-      <div>
->>>>>>> Stashed changes
         <Sidebar defaultCollapsed onClick={''}>
           <Menu>
             <MenuItem
