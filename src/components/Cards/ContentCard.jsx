@@ -24,13 +24,21 @@ export default ({ phase }) => {
       </Stack>
       {content.map((paragraph) => (
         <>
-          <Typography
-            variant="body2"
-            color={COLORS.SECONDARY}
-            sx={{ cursor: 'pointer' }}
+          <Link
+            to={genLink(`/${title}/${paragraph}`)}
+            style={{
+              textDecoration: 'none',
+              color: COLORS.SECONDARY
+            }}
           >
-            {paragraph}
-          </Typography>
+            <Typography
+              variant="body2"
+              color={COLORS.SECONDARY}
+              sx={{ cursor: 'pointer' }}
+            >
+              {paragraph}
+            </Typography>
+          </Link>
           {paragraph !== content[content.length - 1] && <Divider />}
         </>
       ))}
