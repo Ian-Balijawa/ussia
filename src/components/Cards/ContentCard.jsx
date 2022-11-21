@@ -13,8 +13,10 @@ export default ({ phase }) => {
         boxShadow:
           'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
         color: COLORS.SECONDARY,
-        margin: '1em',
-        minHeight: '15em'
+        margin: { xs: 'auto', md: '2em' },
+        padding: '1em',
+        minHeight: '15em',
+        width: 'max-width'
       }}
       padding={2}
     >
@@ -36,7 +38,7 @@ export default ({ phase }) => {
             <Typography
               variant="body2"
               color={COLORS.SECONDARY}
-              sx={{ cursor: 'pointer' }}
+              sx={{ cursor: 'pointer', '&:hover': { color: COLORS.PRIMARY } }}
             >
               {paragraph}
             </Typography>

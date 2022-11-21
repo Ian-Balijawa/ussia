@@ -44,7 +44,7 @@ export default () => {
       title: 'Marketing',
       image: Logo,
       content: [
-        'Products and/or Services',
+        'Products and or Services',
         'Pricing',
         'Placing',
         'Promotion',
@@ -77,7 +77,7 @@ export default () => {
     }
   ];
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, margin: '3em' }}>
       <Grid
         container
         spacing={{ xs: 1, md: 2 }}
