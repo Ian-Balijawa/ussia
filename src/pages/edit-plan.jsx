@@ -77,7 +77,11 @@ export default () => {
     }
   ];
   return (
+<<<<<<< Updated upstream
     <Box sx={{ flexGrow: 1 }}>
+=======
+    <Box sx={{ flexGrow: 1, margin: '3em auto' }}>
+>>>>>>> Stashed changes
       <Grid
         container
         spacing={{ xs: 1, md: 2 }}
