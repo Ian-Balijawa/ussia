@@ -56,7 +56,7 @@ export default ({ title, to }) => {
   );
 };
 
-const IsCompleted = ({ checked, handleChange }) => {
+export const IsCompleted = ({ checked, handleChange }) => {
   return (
     <Checkbox
       sx={{ color: COLORS.PRIMARY, '&.Mui-checked': { color: COLORS.PRIMARY } }}

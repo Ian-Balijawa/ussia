@@ -20,7 +20,7 @@ const ROUTES = {
   STRATEGY_MISSION: '/strategy/mission',
   STRATEGY_ACTION_PLAN: '/strategy/action-plan',
   MARKET_ANALYSIS: '/market-analysis',
-  TARGET_GROUP_DETERMINATION: '/target-group-determination',
+  TARGET_GROUP_DETERMINATION: '/market-analysis/target-group-determination',
   PEOPLE_AND_ORGANISATION: '/people-and-organisation',
   MARKETING: '/marketing',
   FINANCIAL: '/financial',

@@ -21,7 +21,7 @@ export default ({ phase }) => {
       padding={2}
     >
       <Stack direction="row" margin="1em auto">
-        <Image src={image} width={32} height={32} />
+        {image}
         <Typography variant="h6" color={COLORS.SECONDARY}>
           {title}
         </Typography>

@@ -1,5 +1,6 @@
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
+import ButtonGroup from '../../components/ButtonGroup';
 import { COLORS } from '../../constants/colors';
 import { Rewind } from 'phosphor-react';
 
@@ -40,29 +41,7 @@ export default ({ children, description, subtitle, ...props }) => {
         </Typography>
         {children}
         <Box>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{ margin: '1em auto' }}
-          >
-            <Button variant="outlined" size="small">
-              Back
-            </Button>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              spacing={3}
-            >
-              <Button variant="outlined" size="small">
-                Save
-              </Button>
-              <Button variant="outlined" size="small">
-                Further
-              </Button>
-            </Stack>
-          </Stack>
+          <ButtonGroup />
         </Box>
       </Box>
     </Box>

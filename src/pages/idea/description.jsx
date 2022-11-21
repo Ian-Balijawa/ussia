@@ -1,6 +1,7 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { Eye, Rewind } from 'phosphor-react';
 
+import ButtonGroup from '../../components/ButtonGroup';
 import { COLORS } from '../../constants/colors';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from 'rehype-sanitize';
@@ -125,29 +126,7 @@ export default () => {
               style={{ whiteSpace: 'pre-wrap' }}
             />
           </Box>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{ margin: '1em auto' }}
-          >
-            <Button variant="outlined" size="small">
-              Back
-            </Button>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              spacing={3}
-            >
-              <Button variant="outlined" size="small">
-                Save
-              </Button>
-              <Button variant="outlined" size="small">
-                Further
-              </Button>
-            </Stack>
-          </Stack>
+          <ButtonGroup />
         </Box>
       </Box>
     </Box>

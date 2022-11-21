@@ -1,3 +1,16 @@
+import {
+  ChartLineUp,
+  Clock,
+  CurrencyDollar,
+  Horse,
+  List,
+  Megaphone,
+  ProjectorScreenChart,
+  SquaresFour,
+  Sun,
+  VideoCamera
+} from 'phosphor-react';
+
 import Box from '@mui/material/Box';
 import ContentCard from '../components/Cards/ContentCard';
 import Grid from '@mui/material/Grid';
@@ -10,17 +23,17 @@ export default () => {
   const phases = [
     {
       title: 'Idea',
-      image: Logo,
+      image: <Sun size={32} />,
       content: ['Description', 'Your Pitch', 'Strengths and Weaknesses']
     },
     {
       title: 'Strategy',
-      image: Logo,
+      image: <Horse size={32} />,
       content: ['Mission', 'Vision', 'Action Plan']
     },
     {
       title: 'Market Analysis',
-      image: Logo,
+      image: <ChartLineUp size={32} />,
       content: [
         'Target Group Determination',
         'Suppliers',
@@ -33,7 +46,7 @@ export default () => {
     },
     {
       title: 'People & Organization',
-      image: Logo,
+      image: <Clock size={32} />,
       content: [
         'Form and Social Status',
         'Schedule',
@@ -42,7 +55,7 @@ export default () => {
     },
     {
       title: 'Marketing',
-      image: Logo,
+      image: <Megaphone size={32} />,
       content: [
         'Products and or Services',
         'Pricing',
@@ -53,7 +66,7 @@ export default () => {
     },
     {
       title: 'Financial',
-      image: Logo,
+      image: <CurrencyDollar size={32} />,
       content: [
         'Sales forecast',
         'Investments',
@@ -65,7 +78,7 @@ export default () => {
     },
     {
       title: 'Start-up',
-      image: Logo,
+      image: <ProjectorScreenChart size={32} />,
       content: [
         'Company data',
         'Personal data',
