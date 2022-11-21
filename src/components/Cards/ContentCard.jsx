@@ -2,6 +2,8 @@ import { Box, Divider, Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
 import { Image } from '@nextui-org/react';
+import { Link } from 'react-router-dom';
+import { genLink } from './../../utils/link-transform';
 
 export default ({ phase }) => {
   const { title, content, image } = phase;
