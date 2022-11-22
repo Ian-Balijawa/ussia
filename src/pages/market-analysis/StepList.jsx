@@ -66,10 +66,9 @@ export const StepOne = () => {
       <Stack
         direction="row"
         alignItems="center"
-        justifyContent="space-between"
-        alignContent="center"
         margin="1em 0"
         width="fit-content"
+        spacing={3}
       >
         {customers.map((customer) => (
           <Card
@@ -96,9 +95,7 @@ export const StepTwo = () => {
       </Typography>
       <Typography variant="body2" color={COLORS.SECONDARY} textAlign="left">
         List your most important target groups here and complete with a clear
-        description perimport {Input} from '@nextui-org/react'; group. Also
-        indicate why yoimport {MDEditor} from '@uiw/react-md-editor'; u chose
-        these target groups.
+        description per group. Also indicate why you chose these target groups.
       </Typography>
       <AddOption option="Add an audience" onClick={handleAudience} />
     </React.Fragment>
