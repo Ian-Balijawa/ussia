@@ -1,19 +1,28 @@
-import { COLORS } from '../constants/colors';
-
-export const Input = (props) => {
-  const { style } = props;
+export const Input = ({
+  type,
+  placeholder,
+  value,
+  name,
+  onChange,
+  error,
+  style,
+  ...props
+}) => {
   return (
     <input
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      name={name}
+      onChange={onChange}
       {...props}
       style={{
-        border: '1px solid #ccc',
-        height: '100%',
         width: '100%',
-        outline: 'none',
-        padding: '0.7em 1em',
-        color: COLORS.SECONDARY,
+        padding: '0.7em',
+        border: '1px solid #ccc',
+        margin: '0.6em auto',
         borderRadius: '5px',
-        margin: '0.3em auto',
+        outline: 'none',
         ...style
       }}
     />

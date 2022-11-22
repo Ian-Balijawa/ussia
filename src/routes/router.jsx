@@ -11,9 +11,9 @@ const Loadable = (Component) => (props) => {
     </Suspense>
   );
 };
-const SignIn = Loadable(lazy(() => import('../pages/auth/signin')));
+const Login = Loadable(lazy(() => import('../pages/auth/login')));
 const Home = Loadable(lazy(() => import('../pages/home')));
-const SignUp = Loadable(lazy(() => import('../pages/auth/signup')));
+const Register = Loadable(lazy(() => import('../pages/auth/register')));
 const CreatePlan = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
 const ToWork = Loadable(lazy(() => import('../pages/to-work')));
@@ -75,12 +75,12 @@ export default () => {
       element: <Tookit />
     },
     {
-      path: ROUTES.SIGNIN,
-      element: <SignIn />
+      path: ROUTES.LOGIN,
+      element: <Login />
     },
     {
-      path: ROUTES.SIGNUP,
-      element: <SignUp />
+      path: ROUTES.REGISTER,
+      element: <Register />
     },
     {
       path: ROUTES.CREATE,

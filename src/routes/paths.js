@@ -1,7 +1,7 @@
 const ROUTES = {
   ROOT: "/",
-  SIGNIN: '/signin',
-  SIGNUP: '/signup',
+  LOGIN: '/login',
+  REGISTER: '/register',
   NOT_FOUND: '/404',
   CREATE: '/create',
   PLAN: '/plan',
