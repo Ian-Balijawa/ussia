@@ -1,18 +1,5 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ],
-  "redirects": [{ "source": "/(.*)", "destination": "/", "statusCode": 200 }],
-  "trailingSlash": true,
-  "cleanUrls": true
+  "trailingSlash": true
 }
