@@ -4,6 +4,7 @@ import { StepOne, StepThree, StepTwo } from './StepList';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { COLORS } from './../../constants/colors';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Stepper from '@mui/material/Stepper';
@@ -54,8 +55,16 @@ export default () => {
     <Box sx={{ width: '100%' }}>
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
-          <Step key={label} completed={completed[index]}>
-            <StepButton color="inherit" onClick={handleStep(index)}>
+          <Step
+            key={label}
+            completed={completed[index]}
+            sx={{ color: COLORS.PRIMARY }}
+          >
+            <StepButton
+              color="inherit"
+              onClick={handleStep(index)}
+              sx={{ color: COLORS.PRIMARY }}
+            >
               {''}
             </StepButton>
           </Step>

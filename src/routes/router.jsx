@@ -11,9 +11,9 @@ const Loadable = (Component) => (props) => {
     </Suspense>
   );
 };
-const SignIn = Loadable(lazy(() => import('../pages/signin')));
+const SignIn = Loadable(lazy(() => import('../pages/auth/signin')));
 const Home = Loadable(lazy(() => import('../pages/home')));
-const SignUp = Loadable(lazy(() => import('../pages/signup')));
+const SignUp = Loadable(lazy(() => import('../pages/auth/signup')));
 const CreatePlan = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
 const ToWork = Loadable(lazy(() => import('../pages/to-work')));
