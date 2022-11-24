@@ -1,5 +1,6 @@
 const ROUTES = {
   ROOT: "/",
+  HOME: "/home",
   LOGIN: '/login',
   REGISTER: '/register',
   NOT_FOUND: '/404',

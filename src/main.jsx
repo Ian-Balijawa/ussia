@@ -4,6 +4,7 @@ import { BrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import AppRouter from './App';
+import { ChakraProvider } from '@chakra-ui/react';
 import { CollapsibleContextProvider } from './context/collapsible';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout/Layout';

@@ -1,0 +1,5 @@
+*,
+*::after,
+*::before {
+  overflow-x: hidden;
+}

@@ -2,7 +2,7 @@ import { Navigate, createBrowserRouter, useRoutes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
 import LoadingScreen from '../components/LoadingScreen';
-import { ROUTES } from './paths';
+import { ROUTES } from './routes';
 
 const Loadable = (Component) => (props) => {
   return (
@@ -50,6 +50,10 @@ const Startup = Loadable(lazy(() => import('../pages/startup')));
 
 export default () => {
   return useRoutes([
+    {
+      path: ROUTES.HOME,
+      element: <Home />
+    },
     {
       path: ROUTES.ROOT,
       element: <ToWork />
