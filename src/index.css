@@ -6,6 +6,7 @@
 body {
   color: #2a424e;
   font-family: MuseoModerno;
+  oveflow-x: hidden;
 }
 
 .file__component {
