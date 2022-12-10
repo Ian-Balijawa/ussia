@@ -2,21 +2,22 @@
   "name": "ussia-frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.vue src --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,vue}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,vue}\""
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.12",
     "@chakra-ui/react": "^2.4.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@headlessui/react": "^1.7.4",
     "@mui/icons-material": "^5.10.15",
     "@mui/material": "^5.10.14",
-    "@mui/styles": "^5.10.14",
     "@nextui-org/react": "^1.0.0-beta.10",
     "@reduxjs/toolkit": "^1.9.0",
     "@tanstack/react-query": "^4.16.1",
@@ -40,5 +41,17 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^2.2.0",
     "vite": "^3.2.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

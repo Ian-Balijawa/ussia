@@ -123,7 +123,9 @@ const SelectLabels = ({ plans }) => {
           onChange={handleChange}
         >
           {plans.map((plan) => (
-            <MenuItem value={plan}>{plan}</MenuItem>
+            <MenuItem key={plan} value={plan}>
+              {plan}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

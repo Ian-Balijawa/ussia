@@ -26,10 +26,11 @@ export default ({ phase }) => {
           {title}
         </Typography>
       </Stack>
-      {content.map((paragraph) => (
+      {content.map((paragraph, index) => (
         <>
           <Link
             to={genLink(`/${title}/${paragraph}`)}
+            key={index}
             style={{
               textDecoration: 'none',
               color: COLORS.SECONDARY

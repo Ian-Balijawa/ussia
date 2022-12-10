@@ -2,13 +2,14 @@ import { Button, Link, Navbar } from '@nextui-org/react';
 
 import { Layout } from './Layout';
 import { Logo } from './Logo';
+import axios from 'axios';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default () => {
   const [email, _] = useLocalStorage('email', 'ianbalijawa@gmail.com');
 
   const handleSubscribe = async () => {
-    const res = await axios.post('/api/subscribe', {
+    const res = await Axios.post('/api/subscribe', {
       data: JSON.stringify({
         email
       })

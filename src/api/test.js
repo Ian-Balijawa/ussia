@@ -37,5 +37,3 @@ function Todos () {
 		</div>
 	)
 }
-
-//   These three concepts make up most of the core functionality of React Query. The next sections of the documentation will go over each of these core concepts in great detail.

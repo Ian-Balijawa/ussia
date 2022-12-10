@@ -1,0 +1,41 @@
+[
+  {
+    "title": "You just started ?",
+    "price": "€0",
+    "duration": "for 6 months",
+    "designation": "Only for Startups",
+    "timeSpent": "(started < 1 year)",
+    "info": [
+      "Ask all your questions to the UNIZO Entrepreneurs Line",
+      "Receive the digital UNIZO Magazine every month.",
+      "Receive numerous member benefits... and much more"
+    ]
+  },
+  {
+    "title": "Individual Membership",
+    "price": "€230",
+    "duration": "excl. 21% VAT",
+    "designation": "For self-employed persons",
+    "timeSpent": "for 1 year",
+    "info": [
+      "Your interests are defended by 200 employees through more than 800 mandates",
+      "Receive numerous member benefits",
+      "Ask all your questions to the UNIZO Entrepreneurs Line",
+      "Receive our monthly UNIZO Magazine in your mailbox... and much more"
+    ]
+  },
+  {
+    "title": "SME Membership",
+    "price": "from €470",
+    "duration": "excl. 21% VAT",
+    "designation": "",
+    "timeSpent": "for 1 year",
+    "info": [
+      "Your interests are defended by 200 employees through more than 800 mandates",
+      "Receive numerous member benefits",
+      "Ask all your questions to the UNIZO Entrepreneurs Line",
+      "Receive our monthly UNIZO Magazine in your mailbox",
+      "A personal advisor... and much more"
+    ]
+  }
+]

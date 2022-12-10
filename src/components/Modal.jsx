@@ -87,7 +87,12 @@ export const CustomModal = ({ visible, closeHandler }) => {
           <Button auto flat onClick={closeHandler}>
             Create
           </Button>
-          <Button auto color="error" onClick={closeHandler}>
+          <Button
+            auto
+            color="error"
+            css={{ color: '#ffff' }}
+            onClick={closeHandler}
+          >
             Cancel
           </Button>
         </Modal.Footer>

@@ -1,10 +1,9 @@
 import './index.css';
 
-import { BrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import AppRouter from './App';
-import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
 import { CollapsibleContextProvider } from './context/collapsible';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout/Layout';
@@ -31,7 +30,7 @@ root.render(
                 </Layout>
               </CollapsibleContextProvider>
             </ProSidebarProvider>
-            <ReactQueryDevtools initialIsOpen={false} />
+            <ReactQueryDevtools />
           </QueryClientProvider>
         </UseContextProvider>
       </BrowserRouter>

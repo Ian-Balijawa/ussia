@@ -13,6 +13,7 @@ const Loadable = (Component) => (props) => {
 };
 const Login = Loadable(lazy(() => import('../pages/auth/login')));
 const Home = Loadable(lazy(() => import('../pages/home')));
+const Landing = Loadable(lazy(() => import('../pages/landing')));
 const Register = Loadable(lazy(() => import('../pages/auth/register')));
 const CreatePlan = Loadable(lazy(() => import('../pages/create-plan')));
 const NotFound = Loadable(lazy(() => import('../pages/404')));
@@ -53,6 +54,10 @@ export default () => {
     {
       path: ROUTES.HOME,
       element: <Home />
+    },
+    {
+      path: ROUTES.LANDING,
+      element: <Landing />
     },
     {
       path: ROUTES.ROOT,
