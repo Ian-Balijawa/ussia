@@ -11,24 +11,31 @@ export default () => {
       direction={{ xs: 'column', md: 'row' }}
       justifyContent={{ xs: 'center', md: 'flex-start' }}
       alignItems={{ xs: 'center', md: 'flex-start' }}
+      spacing={4}
       sx={{
-        background: COLORS.PRIMARY,
-        margin: '3rem auto'
+        background: COLORS.PRIMARY
       }}
     >
-      <Box
-        direction="row"
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
         alignItems="center"
-        width="40%"
-        justifyContent="center"
+        spacing={3}
+        width={{ xs: '100%', md: '50%' }}
+        justifyContent="space-between"
+        padding="2rem"
       >
-        <Headset size={20} weight="fill" color="#ffff" />
-        <Stack>
+        <Headset size={200} weight="fill" color="#ffff" />
+        <Stack
+          margin="0 1em"
+          justifyContent="center"
+          alignItems="center"
+          padding="1rem "
+        >
           <Typography
             variant="h5"
             color="#ffff"
+            alignItems="center"
             fontWeight="bold"
-            align="center"
             marginBottom="1.5em"
           >
             Ask your question to the UNIZO Ondernemerslijn here
@@ -39,17 +46,26 @@ export default () => {
             more with fewer worries.
           </Typography>
         </Stack>
-      </Box>
-      <Stack width="30%">
-        <Input
+      </Stack>
+      <Stack width={{ xs: '100%', md: '40%' }} padding="2rem">
+        <textarea
           placeholder={'I have a question related...'}
-          style={{ height: '10rem', padding: '0 2rem' }}
+          rows={5}
+          columns={100}
+          style={{
+            padding: '1rem',
+            alignSelf: 'center',
+            width: '85%',
+            outline: 'none',
+            border: '1px solid #ccc',
+            borderRadius: '1rem'
+          }}
         />
         <Button
           style={{
             background: '#fff',
             color: '#E03C31',
-            // width: '100%',
+            width: '80%',
             borderRadius: '1em',
             alignSelf: 'center',
             margin: '1rem auto'

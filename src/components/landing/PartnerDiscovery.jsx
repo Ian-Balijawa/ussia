@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
 import { Image } from '@nextui-org/react';
@@ -24,9 +24,21 @@ export default () => {
       >
         Discover our partners
       </Typography>
-      <Stack direction="row" justifyContent="center" flexWrap="wrap">
-        <Image src={liaintis} alt="partners" />
-        <Image src={kbc} alt="partners" />
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        flexWrap="wrap"
+      >
+        <Stack
+          spacing={5}
+          alignItems={'center'}
+          justifyContent="center"
+          direction={{ xs: 'column', md: 'row' }}
+        >
+          <Image src={liaintis} alt="partners" />
+          <Image src={kbc} alt="partners" />
+        </Stack>
       </Stack>
     </React.Fragment>
   );
