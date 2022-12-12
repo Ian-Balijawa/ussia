@@ -1,4 +1,4 @@
-const ROUTES = {
+export const ROUTES = {
   ROOT: "/",
   HOME: "/home",
   LANDING: "/landing",
@@ -29,5 +29,3 @@ const ROUTES = {
   STARTUP: '/startup',
   ALL: '*',
 };
-
-export { ROUTES };

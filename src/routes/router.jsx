@@ -1,4 +1,4 @@
-import { Navigate, createBrowserRouter, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
 import LoadingScreen from '../components/LoadingScreen';
@@ -38,30 +38,22 @@ const MarketAnalysis = Loadable(lazy(() => import('../pages/market-analysis')));
 const TargetGroupDetermination = Loadable(
   lazy(() => import('../pages/market-analysis/target-group-determination'))
 );
-
 const PeopleAndOrganisation = Loadable(
   lazy(() => import('../pages/people-and-organisation'))
 );
-
 const Marketing = Loadable(lazy(() => import('../pages/marketing')));
-
 const Financial = Loadable(lazy(() => import('../pages/financial')));
-
 const Startup = Loadable(lazy(() => import('../pages/startup')));
 
 export default () => {
   return useRoutes([
     {
-      path: ROUTES.HOME,
-      element: <Home />
-    },
-    {
-      path: ROUTES.LANDING,
+      path: ROUTES.ROOT,
       element: <Landing />
     },
     {
-      path: ROUTES.ROOT,
-      element: <ToWork />
+      path: ROUTES.HOME,
+      element: <Home />
     },
     {
       path: ROUTES.TO_WORK,

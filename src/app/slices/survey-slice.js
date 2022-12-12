@@ -1,6 +1,4 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-
-import { RootState } from '../store';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: {

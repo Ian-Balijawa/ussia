@@ -1,5 +1,6 @@
 import { Loading } from '@nextui-org/react';
 import { Stack } from '@mui/material';
+
 export default () => {
   return (
     <Stack
@@ -8,7 +9,7 @@ export default () => {
       height="100vh"
       alignItems="center"
     >
-      <Loading type="gradient" />
+      <Loading type="default" size="xl" />
     </Stack>
   );
 };

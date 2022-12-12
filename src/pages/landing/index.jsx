@@ -3,6 +3,7 @@ import { Box, Divider, Stack, Typography } from '@mui/material';
 import { Button } from '../../components/CustomBtn';
 import { COLORS } from '../../constants/colors';
 import { CaretRight } from 'phosphor-react';
+import Footer from '../../components/Footer/landing/Footer';
 import HelpContainer from '../../components/landing/HelpContainer';
 import ImgCardLarge from '../../components/landing/ImgCardLarge';
 import ImgCardSmall from '../../components/landing/ImgCardSmall';
@@ -110,6 +111,7 @@ export default () => {
       </Typography>
       <PartnerDiscovery />
       <Message />
+      <Footer />
     </React.Fragment>
   );
 };
