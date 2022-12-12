@@ -33,7 +33,7 @@ export default function App() {
           >
             <AcmeLogo />
           </Navbar.Brand>
-          {location === ROUTES.LANDING && (
+          {location === ROUTES.ROOT && (
             <SelectPlan
               sx={{ display: { xs: 'none' } }}
               view="Choose Region"

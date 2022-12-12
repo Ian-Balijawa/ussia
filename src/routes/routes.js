@@ -1,7 +1,6 @@
 export const ROUTES = {
   ROOT: "/",
   HOME: "/home",
-  LANDING: "/landing",
   LOGIN: '/login',
   REGISTER: '/register',
   NOT_FOUND: '/404',
