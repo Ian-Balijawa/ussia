@@ -41,7 +41,7 @@ export default () => {
       <Box padding="1rem">
         <ImgCardLarge />
         <Stack direction={{ xs: 'column', md: 'row' }}>
-          <Box width="60%">
+          <Box width={{ xs: '100%', md: '60%' }}>
             {news.map((item, index) => (
               <ImgCardSmall
                 key={index}
@@ -70,7 +70,7 @@ export default () => {
         alignItems="center"
         sx={{ background: '#E03C31' }}
       >
-        <Typography variant="h5" fontWeight="bold" color="#fff">
+        <Typography variant="h5" align="center" fontWeight="bold" color="#fff">
           Become a member of the strongest entrepreneurial network in Belgium
         </Typography>
       </Stack>
