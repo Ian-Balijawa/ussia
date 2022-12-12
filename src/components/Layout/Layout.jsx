@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   ChartLineUp,
   Clock,
   CurrencyDollar,
@@ -33,11 +34,8 @@ export default ({ children }) => {
             <Menu>
               <MenuItem
                 onClick={() => collapseSidebar()}
-                routerLink={<Link to={ROUTES.ROOT} />}
-                icon={<List size={32} />}
-              >
-                Toggle Sidebar
-              </MenuItem>
+                icon={<ArrowLeft size={30} weight="fill" />}
+              ></MenuItem>
               <MenuItem
                 routerLink={<Link to={ROUTES.ROOT} />}
                 icon={<SquaresFour size={32} />}
