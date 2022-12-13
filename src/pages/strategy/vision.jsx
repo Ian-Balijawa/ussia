@@ -172,7 +172,7 @@ export const InfoSection = () => {
       </Typography>
       <Box margin="1rem 0">
         {tips.map((tip) => (
-          <React.Fragment>
+          <React.Fragment key={tip}>
             <ListItem item={tip} />
             <Divider orientation="horizontal" flexItem />
           </React.Fragment>
