@@ -23,14 +23,21 @@ export default () => {
       </Stack>
 
       {links.map((link) => (
-        <Stack spacing={2} justifyContent="flex-start" alignItems="flex-start">
+        <Stack
+          key={link.title}
+          spacing={2}
+          justifyContent="flex-start"
+          alignItems="flex-start"
+        >
           <Box margin="1rem 0">
             <Typography variant="h6" fontWeight="bold" color="#fff">
               {link.title}
             </Typography>
           </Box>
           {link.links.map((link) => (
-            <Typography color="#fff">{link}</Typography>
+            <Typography color="#fff" key={link}>
+              {link}
+            </Typography>
           ))}
         </Stack>
       ))}

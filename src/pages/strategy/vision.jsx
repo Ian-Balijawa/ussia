@@ -1,8 +1,9 @@
+import { ArrowLeft, Eye } from 'phosphor-react';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import { Eye, Rewind } from 'phosphor-react';
 
 import { COLORS } from '../../constants/colors';
 import MDEditor from '@uiw/react-md-editor';
+import StratgeyLayout from './Layout';
 import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
@@ -12,41 +13,11 @@ export default () => {
   const [description, setDescription] = useState('');
   console.log(description);
   return (
-    <Box
-      spacing={2}
-      sx={{
-        padding: '1rem 2rem',
-        // width: { sx: '100%', sm: '50%' },
-        margin: '1em auto'
-      }}
+    <StratgeyLayout
+      subtitle="Vision"
+      description='Your vision shows where you want to grow, ask yourself the following question: "What will my life look like in 5 years?" . Also think about where you are working towards with your company.'
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        sx={{ marginBottom: '1em' }}
-        color={COLORS.SECONDARY}
-      >
-        <Rewind size={32} /> Strategy
-      </Stack>
-      <Box>
-        <Typography
-          variant="h5"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          Vision
-        </Typography>
-        <Typography
-          variant="body2"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          Your vision shows where you want to grow, ask yourself the following
-          question: "What will my life look like in 5 years?" . Also think about
-          where you are working towards with your company.
-        </Typography>
+      <Box spacing={2}>
         {textVisible ? (
           <Typography variant="body2" textAlign="left">
             Your vision describes where you see yourself within a number of
@@ -72,7 +43,7 @@ export default () => {
               color={COLORS.PRIMARY}
               spacing={1}
             >
-              <Eye size={16} /> Less Info
+              <Eye size={16} color="#E03C31" /> Less Info
             </Stack>
           ) : (
             <Stack
@@ -82,7 +53,7 @@ export default () => {
               color={COLORS.PRIMARY}
               spacing={1}
             >
-              <Eye size={16} /> More Info
+              <Eye size={16} color="#E03C31" /> More Info
             </Stack>
           )}
         </Typography>
@@ -133,7 +104,7 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> Hide example
+                <Eye size={16} color="#E03C31" /> Hide example
               </Stack>
             ) : (
               <Stack
@@ -143,7 +114,7 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> Show example
+                <Eye size={16} color="#E03C31" /> Show example
               </Stack>
             )}
           </Typography>
@@ -160,31 +131,8 @@ export default () => {
               style={{ whiteSpace: 'pre-wrap' }}
             />
           </Box>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{ margin: '1em auto' }}
-          >
-            <Button variant="outlined" size="small">
-              Back
-            </Button>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              spacing={3}
-            >
-              <Button variant="outlined" size="small">
-                Save
-              </Button>
-              <Button variant="outlined" size="small">
-                Further
-              </Button>
-            </Stack>
-          </Stack>
         </Box>
       </Box>
-    </Box>
+    </StratgeyLayout>
   );
 };

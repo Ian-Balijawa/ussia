@@ -1,8 +1,9 @@
+import { ArrowLeft, Eye } from 'phosphor-react';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import { Eye, Rewind } from 'phosphor-react';
 
 import { COLORS } from '../../constants/colors';
 import MDEditor from '@uiw/react-md-editor';
+import StrategyLayout from './Layout';
 import rehypeSanitize from 'rehype-sanitize';
 import { useState } from 'react';
 
@@ -11,41 +12,11 @@ export default () => {
   const [description, setDescription] = useState('');
   console.log(description);
   return (
-    <Box
-      spacing={2}
-      sx={{
-        padding: '1rem 2rem',
-        // width: { sx: '100%', sm: '50%' },
-        margin: '1em auto'
-      }}
+    <StrategyLayout
+      subtitle="Mission"
+      description="Your mission is pretty much the foundation of everything you do. It's why you started. It should inspire your (potential) customers and encourage them to purchase your product or service."
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        sx={{ marginBottom: '1em' }}
-        color={COLORS.SECONDARY}
-      >
-        <Rewind size={32} /> Strategy
-      </Stack>
-      <Box>
-        <Typography
-          variant="h5"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          Mission
-        </Typography>
-        <Typography
-          variant="body2"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          Your mission is pretty much the foundation of everything you do. It's
-          why you started. It should inspire your (potential) customers and
-          encourage them to purchase your product or service.
-        </Typography>
+      <Box spacing={2}>
         <Box>
           {visible ? (
             <Typography variant="body2" textAlign="left">
@@ -73,7 +44,7 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> Less Info
+                <Eye size={16} color="#E03C31" /> Less Info
               </Stack>
             ) : (
               <Stack
@@ -83,7 +54,7 @@ export default () => {
                 color={COLORS.PRIMARY}
                 spacing={1}
               >
-                <Eye size={16} /> More Info
+                <Eye size={16} color="#E03C31" /> More Info
               </Stack>
             )}
           </Typography>
@@ -108,31 +79,8 @@ export default () => {
               style={{ whiteSpace: 'pre-wrap' }}
             />
           </Box>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            sx={{ margin: '1em auto' }}
-          >
-            <Button variant="outlined" size="small">
-              Back
-            </Button>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              spacing={3}
-            >
-              <Button variant="outlined" size="small">
-                Save
-              </Button>
-              <Button variant="outlined" size="small">
-                Further
-              </Button>
-            </Stack>
-          </Stack>
         </Box>
       </Box>
-    </Box>
+    </StrategyLayout>
   );
 };

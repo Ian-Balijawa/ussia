@@ -41,6 +41,17 @@ const TargetGroupDetermination = Loadable(
 const PeopleAndOrganisation = Loadable(
   lazy(() => import('../pages/people-and-organisation'))
 );
+const EnterpreneurCompetencies = Loadable(
+  lazy(() =>
+    import('../pages/people-and-organisation/enterprenuer-competencies')
+  )
+);
+const FormAndSocialStatus = Loadable(
+  lazy(() => import('../pages/people-and-organisation/form-and-social-status'))
+);
+const Schedule = Loadable(
+  lazy(() => import('../pages/people-and-organisation/schedule'))
+);
 const Marketing = Loadable(lazy(() => import('../pages/marketing')));
 const Financial = Loadable(lazy(() => import('../pages/financial')));
 const Startup = Loadable(lazy(() => import('../pages/startup')));
@@ -130,6 +141,18 @@ export default () => {
     {
       path: ROUTES.PEOPLE_AND_ORGANISATION,
       element: <PeopleAndOrganisation />
+    },
+    {
+      path: ROUTES.ENTERPRENEUR_COMPETENCIES,
+      element: <EnterpreneurCompetencies />
+    },
+    {
+      path: ROUTES.FORM_AND_SOCIAL_STATUS,
+      element: <FormAndSocialStatus />
+    },
+    {
+      path: ROUTES.SCHEDULE,
+      element: <Schedule />
     },
     {
       path: ROUTES.MARKETING,

@@ -53,7 +53,7 @@ const Pricing = ({ title, price, duration, designation, timeSpent, info }) => {
         {timeSpent}
       </Typography>
       {info.map((item, index) => (
-        <ListItem item={item} key={index} />
+        <ListItem item={item} key={`${item}-${index}`} />
       ))}
       <Button style={{ alignSelf: 'center', width: '70%', marginTop: '3rem' }}>
         Join

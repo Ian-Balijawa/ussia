@@ -15,7 +15,7 @@ export default () => {
       title: 'Enterpreneur Competences',
       to: '/people-and-organization/enterpreneur-competences'
     }
-  ];
+  ].reverse();
   return (
     <Box
       sx={{

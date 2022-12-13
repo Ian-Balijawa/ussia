@@ -15,31 +15,37 @@ export default ({ children, description, subtitle, ...props }) => {
         background: '#EAEEF1'
       }}
     >
-      <Box
+      <Stack
         direction="row"
         alignItems="center"
         sx={{ marginBottom: '1em', cursor: 'pointer' }}
         color="#304C59"
-        onClick={() => navigator('/people-and-organisation')}
+        onClick={() => navigator('/idea')}
       >
         <ArrowLeft size={20} weight="fill" color="#E03C31" />
-        <Typography variant="body1" color="#E03C31">
-          People and Organisation
+        <Typography
+          variant="body1"
+          color="#E03C31"
+          sx={{ marginLeft: '0.3em' }}
+        >
+          Idea
         </Typography>
-      </Box>
-      <Typography variant="h5" textAlign="left" sx={{ marginBottom: '1em' }}>
-        {subtitle}
-      </Typography>
-      <Typography
-        variant="body2"
-        textAlign="left"
-        sx={{ marginBottom: '1em', paddingRight: '.5rem' }}
-      >
-        {description}
-      </Typography>
-      {children}
+      </Stack>
       <Box>
-        <ButtonGroup />
+        <Typography variant="h5" textAlign="left" sx={{ marginBottom: '1em' }}>
+          {subtitle}
+        </Typography>
+        <Typography
+          variant="body2"
+          textAlign="left"
+          sx={{ marginBottom: '1em' }}
+        >
+          {description}
+        </Typography>
+        {children}
+        <Box>
+          <ButtonGroup />
+        </Box>
       </Box>
     </Box>
   );

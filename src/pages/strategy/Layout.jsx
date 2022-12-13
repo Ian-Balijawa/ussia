@@ -11,8 +11,8 @@ export default ({ children, description, subtitle, ...props }) => {
     <Box
       spacing={2}
       sx={{
-        padding: '0.4rem',
-        width: { xs: '100%', md: '60%' }
+        padding: '0.5rem',
+        width: { xs: '100%', md: '50%' }
       }}
     >
       <Stack
@@ -20,7 +20,7 @@ export default ({ children, description, subtitle, ...props }) => {
         alignItems="center"
         sx={{ marginBottom: '1em', cursor: 'pointer' }}
         color="#304C59"
-        onClick={() => navigator('/market-analysis')}
+        onClick={() => navigator('/strategy')}
       >
         <ArrowLeft size={20} weight="fill" color="#E03C31" />
         <Typography
@@ -28,7 +28,7 @@ export default ({ children, description, subtitle, ...props }) => {
           color="#E03C31"
           sx={{ marginLeft: '0.3em' }}
         >
-          Market Analysis
+          Strategy
         </Typography>
       </Stack>
       <Box>

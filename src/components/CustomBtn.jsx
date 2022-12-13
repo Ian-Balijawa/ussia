@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background-color: #e03c31;
-  color: #ffffff;
+  background-color: ${(props) =>
+    props.type === 'save' ? 'transparent' : '#e03c31'};
+  color: ${({ type }) => (type === 'save' ? '#2A424E' : '#fff')};
   border: 1px solid #e03c31;
   outline: none;
   width: fit-content;
@@ -12,8 +13,8 @@ export const Button = styled.button`
   margin: 1rem auto;
 
   &:hover {
-    color: #e03c31;
-    background: transparent;
+    color: ${({ type }) => (type === 'save' ? '#fff' : '#e03c31')};
+    background: ${({ type }) => (type === 'save' ? '#2A424E' : 'transparent')};
     transition: all 0.2s ease-in;
   }
 `;

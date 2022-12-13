@@ -1,11 +1,14 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Skeleton, Stack, Typography } from '@mui/material';
 
-import { Button } from '../../components/Button';
+import Layout from './Layout';
+import ReactPlayer from 'react-player';
+import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
+
 import { COLORS } from '../../constants/colors';
 import { Input } from '../../components/Input';
-import { Rewind } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Stepper from './Stepper';
 
 export default () => {
   const [uniqueness, setUniqueness] = useState('');
@@ -20,107 +23,82 @@ export default () => {
   };
 
   return (
-    <Box
-      sx={{
-        padding: '1rem 2rem',
-        // width: { sx: '100%', sm: '50%' },
-        margin: '1em auto'
-      }}
-      spacing={2}
-    >
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ marginBottom: '1em', cursor: 'pointer', color: COLORS.PRIMARY }}
-        color={COLORS.SECONDARY}
-        onClick={() => navigator('/idea')}
-        spacing={4}
-        width="6%"
+    <Stack direction="row">
+      <Layout
+        subtitle={'Your Pitch'}
+        description={
+          "With a pitch you explain your business idea in a few minutes. Not an easy task! Rest assured, we will help you on your way. Tell us more about your plans and we'll write the perfect pitch together."
+        }
       >
-        <Rewind size={32} />
-        Idea
-      </Stack>
-      <Box>
-        <Typography
-          variant="h5"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          Your Pitch
-        </Typography>
-        <Typography
-          variant="body2"
-          color={COLORS.SECONDARY}
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          With a pitch you explain your business idea in a few minutes. Not an
-          easy task! Rest assured, we will help you on your way. Tell us more
-          about your plans and we'll write the perfect pitch together.
-        </Typography>
-
-        <Typography
-          variant="body2"
-          color={COLORS.PRIMARY}
-          textAlign="left"
-          sx={{ margin: '0.3em 0' }}
-        >
-          Step 1: Tell us a little more about your idea
-        </Typography>
-
-        <Box component="form" onSubmit={handleSubmit}>
-          <Input
-            name="targetGroup"
-            value={targetGroup}
-            onChange={({ target }) => setTargetGroup(target.value)}
-            placeholder="Who do you want to reach?"
-          />
-          <Input
-            name="expectations"
-            value={expectations}
-            onChange={({ target }) => setExpecations(target.value)}
-            placeholder="What needs/expectations does your target group have?"
-          />
-          <Input
-            name="offerComposition"
-            value={offerComposition}
-            onChange={({ target }) => setOfferComposition(target.value)}
-            placeholder="What does your offer consist of?"
-          />
-          <Input
-            name="uniqueness"
-            value={uniqueness}
-            onChange={({ target }) => setUniqueness(target.value)}
-            placeholder="What makes your offer unique?"
-          />
-        </Box>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          //   alignItems="center"
-          alignContent="center"
-          sx={{ margin: '1em 0' }}
-        >
-          <Button variant="outlined" size="small">
-            Back
-          </Button>
-          <Stack
-            direction="row"
-            justifyContent="space-between"
-            alignItems="center"
-            spacing={3}
-          >
-            <Button variant="outlined" onClick={handleSubmit} size="small">
-              Save
-            </Button>
-            <Button variant="outlined" size="small" style={{ color: 'white' }}>
-              Further
-            </Button>
+        <Box spacing={2}>
+          <Stack>
+            <Stepper />
           </Stack>
-        </Stack>
-      </Box>
-    </Box>
+        </Box>
+      </Layout>
+      <InfoSection />
+    </Stack>
+  );
+};
+
+const InfoSection = () => {
+  const links = [
+    {
+      title: 'Five Pitiching Tips in Podcasts',
+      href: 'https://www.freelancer.com/community/articles/boost-your-productivity-as-a-freelancer'
+    },
+    {
+      title: 'Pitch your idea without any problems',
+      href: 'https://www.freelancer.com/community/articles/10-tips-to-save-time'
+    }
+  ];
+  return (
+    <Stack
+      width="30%"
+      sx={{ margin: '1em auto', display: { xs: 'none', md: 'block' } }}
+    >
+      <Typography
+        color="#E03C31"
+        fontWeight="bold"
+        margin="1rem 0"
+        variant="body1"
+      >
+        Perfect pitch?
+      </Typography>
+      <Typography color="#2A424E" variant="p">
+        Explain your idea in one minute. Keep it simple. If your grandmother and
+        14-year-old niece understand, then you have completed your assignment!
+      </Typography>
+      <Typography
+        fontWeight="bold"
+        variant="body1"
+        margin="1rem 0"
+        color="#E03C31"
+      >
+        Useful Links
+      </Typography>
+      {links.map((link) => (
+        <ListItem
+          item={link.title}
+          styles={{ textDecoration: 'underline' }}
+          href={link.href}
+        />
+      ))}
+
+      <Typography color="#E03C31" fontWeight="bold" margin="1rem 0">
+        Related Videos
+      </Typography>
+
+      <ReactPlayer
+        width="500px"
+        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+        fallback={<Skeleton variant="rectangular" width={350} height={200} />}
+      />
+
+      <Typography color="#2A424E" variant="p">
+        Want to know more about the elevator pitch? UNIZO advisor Veerle Boon
+        tells you all about it.
+      </Typography>
+    </Stack>
   );
 };
