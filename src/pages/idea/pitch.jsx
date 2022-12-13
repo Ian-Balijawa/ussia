@@ -4,8 +4,6 @@ import Layout from './Layout';
 import ReactPlayer from 'react-player';
 import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
 
-import { COLORS } from '../../constants/colors';
-import { Input } from '../../components/Input';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Stepper from './Stepper';
