@@ -16,6 +16,10 @@ export default () => {
       to: '/market-analysis/partners'
     },
     {
+      title: 'Competitors',
+      to: '/market-analysis/competitors'
+    },
+    {
       title: 'Trend Analysis',
       to: '/market-analysis/trend-analysis'
     },

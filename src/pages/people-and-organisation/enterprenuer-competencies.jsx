@@ -177,9 +177,6 @@ export const ListItem = ({ item, styles, isLink }) => {
       justifyContent="flex-start"
       sx={{
         cursor: 'pointer',
-        '&:hover': {
-          color: '#E03C31'
-        },
         ...styles
       }}
     >
@@ -188,7 +185,17 @@ export const ListItem = ({ item, styles, isLink }) => {
       ) : (
         <ArrowRight size={20} weight="fill" color="#E03C31" />
       )}
-      <Typography variant="p">{item}</Typography>
+      <Typography
+        sx={{
+          '&:hover': {
+            transition: 'all 0.3s ease-in-out',
+            color: isLink && '#E03C31'
+          }
+        }}
+        variant="p"
+      >
+        {item}
+      </Typography>
     </Stack>
   );
 };

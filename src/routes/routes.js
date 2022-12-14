@@ -24,6 +24,7 @@ export const ROUTES = {
   TARGET_GROUP_DETERMINATION: '/market-analysis/target-group-determination',
   SUPPLIERS: '/market-analysis/suppliers',
   PARTNERS: '/market-analysis/partners',
+  COMPETITORS: '/market-analysis/competitors',
   PEOPLE_AND_ORGANISATION: '/people-and-organisation',
   ENTERPRENEUR_COMPETENCIES: "/people-and-organization/enterpreneur-competences",
   FORM_AND_SOCIAL_STATUS: "/people-and-organization/form-and-social-status",
