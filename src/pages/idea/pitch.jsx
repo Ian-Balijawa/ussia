@@ -1,12 +1,11 @@
 import { Box, Skeleton, Stack, Typography } from '@mui/material';
 
 import Layout from './Layout';
-import ReactPlayer from 'react-player';
 import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
-
+import ReactPlayer from 'react-player';
+import Stepper from './Stepper';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import Stepper from './Stepper';
 
 export default () => {
   const [uniqueness, setUniqueness] = useState('');
