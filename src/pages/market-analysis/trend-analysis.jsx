@@ -35,7 +35,6 @@ export default () => {
                 justifyContent="flex-start"
                 alignItems="center"
                 spacing={2}
-                margin="1rem 0"
                 key={question}
               >
                 <Typography
@@ -55,7 +54,7 @@ export default () => {
         )}
         <Typography
           width="fit-content"
-          sx={{ cursor: 'pointer', margin: '1em 0', color: '#E03C31' }}
+          sx={{ cursor: 'pointer', marginBottom: '2em', color: '#E03C31' }}
           onClick={() => setIsVisible(!isVisible)}
         >
           {!isVisible ? 'More Info' : 'Less Information'}
