@@ -41,6 +41,9 @@ const TargetGroupDetermination = Loadable(
 const Suppliers = Loadable(
   lazy(() => import('../pages/market-analysis/suppliers'))
 );
+const Partners = Loadable(
+  lazy(() => import('../pages/market-analysis/partners'))
+);
 const PeopleAndOrganisation = Loadable(
   lazy(() => import('../pages/people-and-organisation'))
 );
@@ -144,6 +147,10 @@ export default () => {
     {
       path: ROUTES.SUPPLIERS,
       element: <Suppliers />
+    },
+    {
+      path: ROUTES.PARTNERS,
+      element: <Partners />
     },
     {
       path: ROUTES.PEOPLE_AND_ORGANISATION,
