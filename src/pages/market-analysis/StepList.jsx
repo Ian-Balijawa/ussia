@@ -1,12 +1,14 @@
 import * as React from 'react';
 
-import { Buildings, Users } from 'phosphor-react';
+import { Buildings, Paperclip, Users } from 'phosphor-react';
 
 import AddOption from './AddOption';
 import Box from '@mui/material/Box';
 import { COLORS } from '../../constants/colors';
 import { Checkbox } from '@mui/material';
+import { Input } from '../../components/Input';
 import { Link } from 'react-router-dom';
+import MDEditor from '@uiw/react-md-editor';
 import { Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import rehypeSanitize from 'rehype-sanitize';
@@ -60,7 +62,7 @@ export const StepOne = () => {
   ];
   return (
     <>
-      <Typography variant="body2" color={COLORS.PRIMARY} textAlign="left">
+      <Typography variant="body2" color={COLORS.PRIMARY}>
         Step 1: Who are your customers?
       </Typography>
       <Stack
@@ -83,59 +85,146 @@ export const StepOne = () => {
 };
 
 export const StepTwo = () => {
-  const [audienceList, setAudienceList] = React.useState([]);
-  const handleAudience = (e) => {
-    setAudience(e.target.value);
+  const [audienceList, setAudienceList] = React.useState([
+    {
+      id: 1,
+      nameOfTargetAudience: 'Target Audience one',
+      descriptionOfTargetAudience: 'Description of Target Audience one'
+    }
+  ]);
+
+  const handleAddMoreAudience = (e) => {
+    const newAudienceList = [...audienceList, e.target.value];
+    setAudienceList(newAudienceList);
   };
 
   return (
     <React.Fragment>
-      <Typography variant="body2" color={COLORS.PRIMARY} textAlign="left">
+      <Typography
+        variant="body1"
+        margin="1rem 0"
+        fontWeight={'bold'}
+        color={COLORS.PRIMARY}
+      >
         Step 2: Determine your target group(s)
       </Typography>
-      <Typography variant="body2" color={COLORS.SECONDARY} textAlign="left">
+      <Typography variant="body2" color={COLORS.SECONDARY}>
         List your most important target groups here and complete with a clear
         description per group. Also indicate why you chose these target groups.
       </Typography>
-      <AddOption option="Add an audience" onClick={handleAudience} />
+      <AddOption item="Add an audience" onClick={handleAddMoreAudience} />
+      {audienceList.map((audience) => (
+        <Audience
+          key={audience.id}
+          targetGroupName={`TARGET GROUP ${audience.id}`}
+          nameOfTargetAudience={audience.nameOfTargetAudience}
+          description={audience.description}
+        />
+      ))}
     </React.Fragment>
   );
 };
 
 export const StepThree = () => {
+  const [description, setDescription] = React.useState('');
   return (
     <React.Fragment>
-      <Typography variant="body2" color={COLORS.PRIMARY} textAlign="left">
-        Step 3: What are your customers looking for?
+      <Typography
+        variant="body1"
+        margin="1rem 0"
+        fontWeight="bold"
+        color={COLORS.PRIMARY}
+      >
+        Argumentation
       </Typography>
+      <Typography variant="body1" color={COLORS.SECONDARY}>
+        You described which target groups you want to reach. Argue here that
+        these target group(s) are also effective, for example based on the
+        results of your market research, surveys, statistics…
+      </Typography>
+
+      <Box margin="2rem 0">
+        <MDEditor
+          value={description}
+          onChange={setDescription}
+          previewOptions={{
+            rehypePlugins: [[rehypeSanitize]]
+          }}
+        />
+        <MDEditor.Markdown
+          source={description}
+          style={{ whiteSpace: 'pre-wrap' }}
+        />
+      </Box>
+      <Typography variant="body1" margin="1rem 0" fontWeight="bold">
+        Files
+      </Typography>
+      <Typography variant="body1">
+        Here you can upload extra files related to your target group analysis.
+        Attention, these files can be viewed by your commenters, but are not
+        included in the export of a plan.
+      </Typography>
+      <Stack
+        margin="1rem"
+        justifyContent="center"
+        alignItems="center"
+        height="10rem"
+        sx={{
+          border: '2px dashed #ccc',
+          borderRadius: '1rem',
+          '&:hover': {
+            borderColor: '#DF4136'
+          }
+        }}
+      >
+        <label htmlFor="image-upload">
+          <Paperclip size={50} weight="fill" />
+          <Typography margin="1rem" className="upload fa fa-upload">
+            Select a file
+          </Typography>
+        </label>
+        <input
+          type="file"
+          id="image-upload"
+          accept="*"
+          onChange={(e) => console.log(e.target.files)}
+        />
+      </Stack>
     </React.Fragment>
   );
 };
 
-const Audience = ({ targetGroupName, value }) => {
+const Audience = ({ targetGroupName, nameOfTargetAudience, description }) => {
   return (
-    <Box sx={{ margin: '1em 0' }} spacing={3}>
-      <Typography variant="body2" color={COLORS.SECONDARY} textAlign="left">
-        {targetGroupName}
-      </Typography>
+    <Box
+      sx={{ padding: '1em', background: '#fff', borderRadius: '.4rem' }}
+      spacing={3}
+    >
+      <Typography variant="body2">{targetGroupName}</Typography>
+      <Stack margin="1rem 0" justifyContent={'flex-start'}>
+        <label
+          htmlFor="target-group-name"
+          style={{ color: '#E03C31', alignSelf: 'flex-start' }}
+          variant="body1"
+        >
+          Name of target group
+        </label>
+        <Input
+          id="target-group-name"
+          name={'nameOfTargetAudience'}
+          style={{ width: '80%' }}
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </Stack>
 
-      <Input
-        placeholder="Name of Target Group"
-        name={`targetGroup ${number}`}
-        type="text"
-        variant="outline"
-        value={value}
-        onChange={(e) => console.log(e.target.value)}
-      />
-
-      <Typography variant="body2" color={COLORS.SECONDARY} textAlign="left">
+      <Typography margin="1rem 0" variant="body2">
         The Description
       </Typography>
 
       <Box>
         <MDEditor
           value={description}
-          onChange={setDescription}
+          onChange={''}
           previewOptions={{
             rehypePlugins: [[rehypeSanitize]]
           }}

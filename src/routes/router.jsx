@@ -38,6 +38,9 @@ const MarketAnalysis = Loadable(lazy(() => import('../pages/market-analysis')));
 const TargetGroupDetermination = Loadable(
   lazy(() => import('../pages/market-analysis/target-group-determination'))
 );
+const Suppliers = Loadable(
+  lazy(() => import('../pages/market-analysis/suppliers'))
+);
 const PeopleAndOrganisation = Loadable(
   lazy(() => import('../pages/people-and-organisation'))
 );
@@ -137,6 +140,10 @@ export default () => {
     {
       path: ROUTES.TARGET_GROUP_DETERMINATION,
       element: <TargetGroupDetermination />
+    },
+    {
+      path: ROUTES.SUPPLIERS,
+      element: <Suppliers />
     },
     {
       path: ROUTES.PEOPLE_AND_ORGANISATION,

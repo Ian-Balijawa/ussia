@@ -22,6 +22,7 @@ export const ROUTES = {
   STRATEGY_ACTION_PLAN: '/strategy/action-plan',
   MARKET_ANALYSIS: '/market-analysis',
   TARGET_GROUP_DETERMINATION: '/market-analysis/target-group-determination',
+  SUPPLIERS: '/market-analysis/suppliers',
   PEOPLE_AND_ORGANISATION: '/people-and-organisation',
   ENTERPRENEUR_COMPETENCIES: "/people-and-organization/enterpreneur-competences",
   FORM_AND_SOCIAL_STATUS: "/people-and-organization/form-and-social-status",

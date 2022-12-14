@@ -4,8 +4,8 @@ export default () => {
   return (
     <Stack
       direction="row"
+      background="#FFFFFF"
       justifyContent="space-between"
-      width="100%"
       alignItems="center"
     >
       <Button>Back</Button>

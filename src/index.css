@@ -47,3 +47,31 @@ select {
   text-indent: 1px;
   text-overflow: '';
 }
+
+label {
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-upload {
+  color: rgb(15, 15, 15);
+}
+
+label.file {
+  vertical-align: middle;
+}
+
+input[type='file'] {
+  display: none;
+  z-index: 9999;
+}
+
+span.upload {
+  border-radius: 4px;
+}

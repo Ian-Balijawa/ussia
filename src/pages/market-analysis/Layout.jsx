@@ -11,43 +11,38 @@ export default ({ children, description, subtitle, ...props }) => {
     <Box
       spacing={2}
       sx={{
-        padding: '0.5rem',
         width: { xs: '100%', md: '60%' },
         background: '#EAEEF1'
       }}
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        sx={{ marginBottom: '1em', cursor: 'pointer' }}
-        color="#304C59"
-        onClick={() => navigator('/market-analysis')}
-      >
-        <ArrowLeft size={20} weight="fill" color="#E03C31" />
-        <Typography
-          variant="body1"
-          color="#E03C31"
-          sx={{ marginLeft: '0.3em' }}
+      <Stack width="90%" margin="1rem auto">
+        <Stack
+          direction="row"
+          alignItems="center"
+          sx={{ marginBottom: '1em', cursor: 'pointer' }}
+          color="#304C59"
+          onClick={() => navigator('/market-analysis')}
         >
-          Market Analysis
-        </Typography>
-      </Stack>
-      <Box>
-        <Typography variant="h5" textAlign="left" sx={{ marginBottom: '1em' }}>
-          {subtitle}
-        </Typography>
-        <Typography
-          variant="body2"
-          textAlign="left"
-          sx={{ marginBottom: '1em' }}
-        >
-          {description}
-        </Typography>
-        {children}
+          <ArrowLeft size={20} weight="fill" color="#E03C31" />
+          <Typography
+            variant="body1"
+            color="#E03C31"
+            sx={{ marginLeft: '0.3em' }}
+          >
+            Market Analysis
+          </Typography>
+        </Stack>
         <Box>
+          <Typography variant="h5" margin="1em 0">
+            {subtitle}
+          </Typography>
+          <Typography variant="body2" margin="1em 0">
+            {description}
+          </Typography>
+          {children}
           <ButtonGroup />
         </Box>
-      </Box>
+      </Stack>
     </Box>
   );
 };

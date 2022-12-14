@@ -10,7 +10,6 @@ export const Button = styled.button`
   padding: 0.7em 2rem;
   border-radius: 3rem;
   cursor: pointer;
-  margin: 1rem auto;
 
   &:hover {
     color: ${({ type }) => (type === 'save' ? '#fff' : '#e03c31')};

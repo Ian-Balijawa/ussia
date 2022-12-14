@@ -1,12 +1,11 @@
-import { Box, Stack, Typography, Divider, Skeleton } from '@mui/material';
-
+import { ArrowLeft, ArrowRight } from 'phosphor-react';
+import { Box, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
-import ReactPlayer from 'react-player';
 
 import Layout from './Layout';
+import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
+import ReactPlayer from 'react-player';
 import Stepper from './Stepper';
-import { ArrowLeft, ArrowRight } from 'phosphor-react';
 
 export default () => {
   const subtitle = 'Target Group Determination';
@@ -104,7 +103,7 @@ export const InfoSection = ({
         </Typography>
         {links.map((link) => (
           <React.Fragment key={link.href}>
-            <ListItem item={link.title} />
+            <ListItem item={link.title} isLink={true} />
             <Divider orientation="horizontal" flexItem />
           </React.Fragment>
         ))}

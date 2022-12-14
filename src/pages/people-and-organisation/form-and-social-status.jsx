@@ -1,8 +1,9 @@
-import { Skeleton, Box, Stack, Typography } from '@mui/material';
+import { Box, Skeleton, Stack, Typography } from '@mui/material';
+
 import Layout from './Layout';
-import { useState } from 'react';
 import { ListItem } from './enterprenuer-competencies';
 import ReactPlayer from 'react-player';
+import { useState } from 'react';
 
 export default () => {
   const [selectedStatus, setSelectedStatus] = useState('Main Profession');
@@ -162,6 +163,7 @@ const InfoSection = () => {
       </Typography>
       {links.map((link) => (
         <ListItem
+          isLink={true}
           item={link.title}
           styles={{ textDecoration: 'underline' }}
           href={link.href}
@@ -178,7 +180,7 @@ const InfoSection = () => {
         Related Videos
       </Typography>
       <ReactPlayer
-        width="500px"
+        width="400px"
         url="https://youtu.be/rEYWpVgaP-M"
         fallback={<Skeleton variant="rectangular" width={500} />}
       />

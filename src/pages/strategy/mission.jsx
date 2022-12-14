@@ -1,13 +1,13 @@
-import { Eye } from 'phosphor-react';
-import { Box, Stack, Typography, Divider, Skeleton } from '@mui/material';
+import { Box, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import React, { useState } from 'react';
 
 import { COLORS } from '../../constants/colors';
-import MDEditor from '@uiw/react-md-editor';
+import { Eye } from 'phosphor-react';
 import Layout from './Layout';
-import rehypeSanitize from 'rehype-sanitize';
-import React, { useState } from 'react';
 import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
+import MDEditor from '@uiw/react-md-editor';
 import ReactPlayer from 'react-player';
+import rehypeSanitize from 'rehype-sanitize';
 
 export default () => {
   const [visible, setVisible] = useState(false);
@@ -123,11 +123,12 @@ export const InfoSection = () => {
         Useful Links
       </Typography>
       <ListItem
+        isLink={true}
         styles={{ margin: '0 1rem 0 0' }}
         item="Get started with your missing, vision and strategy"
       />
       <ReactPlayer
-        width="500px"
+        width="400px"
         url="https://youtu.be/rEYWpVgaP-M"
         fallback={<Skeleton variant="rectangular" width={500} />}
       />

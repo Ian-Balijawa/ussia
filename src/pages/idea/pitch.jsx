@@ -76,6 +76,7 @@ const InfoSection = () => {
       </Typography>
       {links.map((link) => (
         <ListItem
+          isLink={true}
           item={link.title}
           styles={{ textDecoration: 'underline' }}
           href={link.href}
@@ -87,7 +88,7 @@ const InfoSection = () => {
       </Typography>
 
       <ReactPlayer
-        width="500px"
+        width="400px"
         url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
         fallback={<Skeleton variant="rectangular" width={350} height={200} />}
       />

@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material';
 import { COLORS } from '../../constants/colors';
 import { Plus } from 'phosphor-react';
 
-export default ({ option }) => {
+export default ({ item }) => {
   return (
     <Stack
       direction="row"
@@ -18,10 +18,14 @@ export default ({ option }) => {
         }
       }}
     >
-      <Typography variant="body2" textAlign="left" sx={{ margin: '0.3em 0' }}>
-        {option}
+      <Typography
+        variant="body2"
+        textAlign="left"
+        sx={{ margin: '0.3em 0', textDecoration: 'underline' }}
+      >
+        {item}
       </Typography>
-      <Plus size={20} />
+      <Plus size={20} weight="fill" color="#E03C31" />
     </Stack>
   );
 };

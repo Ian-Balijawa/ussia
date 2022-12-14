@@ -1,14 +1,13 @@
-import { Plus } from 'phosphor-react';
 import { ArrowLeft, ArrowRight } from 'phosphor-react';
 import { Box, Skeleton, Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
 import Layout from './layout';
+import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
+import { Plus } from 'phosphor-react';
+import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-
-import ReactPlayer from 'react-player';
-import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
 
 export default () => {
   const [description, setDescription] = useState('');
@@ -167,6 +166,7 @@ const InfoSection = ({ currentVideoUrl, showNextVideo, showPreviousVideo }) => {
       </Typography>
       {links.map((link) => (
         <ListItem
+          isLink={true}
           item={link.title}
           styles={{ textDecoration: 'underline' }}
           href={link.href}
@@ -207,7 +207,7 @@ const InfoSection = ({ currentVideoUrl, showNextVideo, showPreviousVideo }) => {
         </Stack>
       </Stack>
       <ReactPlayer
-        width="500px"
+        width="400px"
         url={currentVideoUrl}
         fallback={<Skeleton variant="rectangular" width={350} height={200} />}
       />

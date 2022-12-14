@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { StepOne, StepThree, StepTwo } from './StepList';
+import { StepOne, StepTwo } from './StepList';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -10,7 +10,7 @@ import StepButton from '@mui/material/StepButton';
 import Stepper from '@mui/material/Stepper';
 import Typography from '@mui/material/Typography';
 
-const steps = ['1', '2', '3'];
+const steps = ['1', '2'];
 
 export default () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -84,13 +84,7 @@ export default () => {
         ) : (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              {activeStep === 0 ? (
-                <StepOne />
-              ) : activeStep === 1 ? (
-                <StepTwo />
-              ) : (
-                <StepThree />
-              )}
+              {activeStep === 0 ? <StepOne /> : <StepTwo />}
             </Typography>
           </React.Fragment>
         )}

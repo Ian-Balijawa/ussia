@@ -1,11 +1,11 @@
-import { Box, Stack, Typography, Divider } from '@mui/material';
+import { ArrowRight, ArrowSquareOut, Eye } from 'phosphor-react';
+import { Box, Divider, Stack, Typography } from '@mui/material';
+import React, { useState } from 'react';
 
 import { COLORS } from '../../constants/colors';
-import { Eye, ArrowRight } from 'phosphor-react';
 import Layout from './Layout';
 import MDEditor from '@uiw/react-md-editor';
 import rehypeSanitize from 'rehype-sanitize';
-import React, { useState } from 'react';
 
 export default () => {
   const [visible, setVisible] = useState(false);
@@ -167,7 +167,7 @@ export const InfoSection = () => {
   );
 };
 
-export const ListItem = ({ item, styles }) => {
+export const ListItem = ({ item, styles, isLink }) => {
   return (
     <Stack
       direction="row"
@@ -183,7 +183,11 @@ export const ListItem = ({ item, styles }) => {
         ...styles
       }}
     >
-      <ArrowRight size={20} weight="fill" color="#E03C31" />
+      {isLink ? (
+        <ArrowSquareOut size={32} weight="fill" color="#E03C31" />
+      ) : (
+        <ArrowRight size={20} weight="fill" color="#E03C31" />
+      )}
       <Typography variant="p">{item}</Typography>
     </Stack>
   );
