@@ -11,7 +11,6 @@ export default ({ children, description, subtitle, ...props }) => {
     <Box
       spacing={2}
       sx={{
-        padding: '0.5rem',
         width: { xs: '100%', md: '60%' },
         background: '#EAEEF1'
       }}

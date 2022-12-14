@@ -2,11 +2,11 @@ import { Box, Divider, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 import Layout from './Layout';
+import { ListItem } from './enterprenuer-competencies';
 import MDEditor from '@uiw/react-md-editor';
 import { planSchema } from '../../constants/schema';
 import rehypeSanitize from 'rehype-sanitize';
 import { todos } from '../../constants/todos';
-import { ListItem } from './enterprenuer-competencies';
 
 export default () => {
   const [weekPlan, setWeekPlan] = useState(planSchema);
@@ -204,6 +204,7 @@ const InfoSection = () => {
       </Typography>
       {links.map((link) => (
         <ListItem
+          isLink={true}
           item={link.title}
           styles={{ textDecoration: 'underline' }}
           href={link.href}

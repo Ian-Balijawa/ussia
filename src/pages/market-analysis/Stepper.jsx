@@ -4,7 +4,7 @@ import { StepOne, StepThree, StepTwo } from './StepList';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { COLORS } from './../../constants/colors';
+import { COLORS } from '../../constants/colors';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Stepper from '@mui/material/Stepper';
@@ -24,22 +24,8 @@ export default () => {
     return Object.keys(completed).length;
   };
 
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-
   const allStepsCompleted = () => {
     return completedSteps() === totalSteps();
-  };
-
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-          // find the first step that has been completed
-          steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
   };
 
   const handleStep = (step) => () => {
@@ -58,7 +44,7 @@ export default () => {
           <Step
             key={label}
             completed={completed[index]}
-            sx={{ color: COLORS.PRIMARY }}
+            sx={{ color: COLORS.PRIMARY, overflow: 'hidden' }}
           >
             <StepButton
               color="inherit"

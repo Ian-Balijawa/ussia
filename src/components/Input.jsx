@@ -20,7 +20,7 @@ export const Input = ({
         width: '100%',
         padding: '0.7em',
         border: '1px solid #ccc',
-        margin: '0.6em auto',
+        margin: '0.6em 0',
         borderRadius: '5px',
         outline: 'none',
         ...style

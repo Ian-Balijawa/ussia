@@ -4,7 +4,7 @@ import { StepOne, StepTwo } from './StepList';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { COLORS } from './../../constants/colors';
+import { COLORS } from './../../../constants/colors';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Stepper from '@mui/material/Stepper';
@@ -44,7 +44,7 @@ export default () => {
           <Step
             key={label}
             completed={completed[index]}
-            sx={{ color: COLORS.PRIMARY }}
+            sx={{ color: COLORS.PRIMARY, overflow: 'hidden' }}
           >
             <StepButton
               color="inherit"

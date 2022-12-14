@@ -1,79 +1,8 @@
 import CardVideo from '../components/Cards/CardVideo';
 import Grid from '@mui/material/Grid';
-import { Stack } from '@mui/material';
+import { videos } from './videos-data';
+
 export default () => {
-  const videos = [
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    },
-    {
-      title: 'kawasaki h2r',
-      description:
-        'React Router v6 React Router v6 React Router v6React Router v6React Router v6React Router v6',
-      src: '/public/images/me.png',
-      tags: ['motogp', 'kawasaki', 'h2r']
-    }
-  ];
   return (
     <Grid
       container

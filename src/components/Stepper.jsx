@@ -21,22 +21,8 @@ export default ({ children }) => {
     return Object.keys(completed).length;
   };
 
-  const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
-
   const allStepsCompleted = () => {
     return completedSteps() === totalSteps();
-  };
-
-  const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-          // find the first step that has been completed
-          steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
   };
 
   const handleStep = (step) => () => {
