@@ -4,7 +4,7 @@ import { StepOne, StepThree, StepTwo } from './StepList';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { COLORS } from './../../../constants/colors';
+import { COLORS } from '../../constants/colors';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
 import Stepper from '@mui/material/Stepper';
