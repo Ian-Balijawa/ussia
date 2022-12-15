@@ -1,5 +1,6 @@
 import { Button } from './CustomBtn';
 import { Stack } from '@mui/material';
+
 export default () => {
   return (
     <Stack
@@ -7,6 +8,7 @@ export default () => {
       background="#FFFFFF"
       justifyContent="space-between"
       alignItems="center"
+      margin="1rem 0"
     >
       <Button>Back</Button>
       <Stack
