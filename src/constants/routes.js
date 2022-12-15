@@ -3,6 +3,7 @@ import { ROUTES } from "../routes/routes";
 export const publicRoutes = [
 	ROUTES.ROOT,
 	ROUTES.LANDING,
+	ROUTES.STARTERS,
 	ROUTES.CREATE,
 	ROUTES.TO_WORK,
 	ROUTES.PLAN,
