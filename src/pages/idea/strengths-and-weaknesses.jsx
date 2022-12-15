@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight } from 'phosphor-react';
 import { Box, Skeleton, Stack, Typography } from '@mui/material';
 
 import { COLORS } from '../../constants/colors';
-import Layout from './layout';
+import Layout from './Layout';
 import { ListItem } from '../people-and-organisation/enterprenuer-competencies';
 import { Plus } from 'phosphor-react';
 import ReactPlayer from 'react-player';
