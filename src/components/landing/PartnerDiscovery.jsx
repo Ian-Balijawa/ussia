@@ -14,10 +14,9 @@ export default () => {
         color={COLORS.SECONDARY}
         fontWeight="bold"
         align="center"
-        marginBottom="1.5em"
+        margin="1em 0"
         sx={{
           cursor: 'pointer',
-          textDecoration: 'underline',
           margin: '3rem auto',
           '&:hover': { color: COLORS.PRIMARY }
         }}
@@ -32,6 +31,7 @@ export default () => {
       >
         <Stack
           spacing={5}
+          margin="1rem 0"
           alignItems={'center'}
           justifyContent="center"
           direction={{ xs: 'column', md: 'row' }}

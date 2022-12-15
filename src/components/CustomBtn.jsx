@@ -4,7 +4,7 @@ export const Button = styled.button`
   background-color: ${(props) =>
     props.type === 'save' ? 'transparent' : '#e03c31'};
   color: ${({ type }) => (type === 'save' ? '#2A424E' : '#fff')};
-  border: 1px solid #e03c31;
+  border: 1px solid ${({ type }) => (type === 'save' ? '#2A424E' : '#e03c31')};
   outline: none;
   width: fit-content;
   padding: 0.7em 2rem;
