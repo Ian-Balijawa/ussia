@@ -1,8 +1,12 @@
 import { Divider, Stack, Typography } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { ROUTES } from '../../routes/routes';
 
 const NavContainer = () => {
   const items = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: ROUTES.ROOT },
+    { name: 'Starter', href: ROUTES.STARTERS },
     { name: 'Activities', href: '#' },
     { name: 'Info & Advice', href: '#' },
     { name: 'View Points', href: '#' },
@@ -39,10 +43,12 @@ const NavContainer = () => {
 export default NavContainer;
 
 const Item = ({ item }) => {
+  const navigate = useNavigate();
   return (
     <Typography
       variant="h6"
       component="div"
+      onClick={() => navigate(item.href)}
       sx={{
         flexGrow: 1,
         color: '#ffff',
