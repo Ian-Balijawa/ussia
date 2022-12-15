@@ -7,6 +7,7 @@ const NavContainer = () => {
   const items = [
     { name: 'Home', href: ROUTES.ROOT },
     { name: 'Starter', href: ROUTES.STARTERS },
+    { name: 'Business Plan', href: ROUTES.EDIT_PLAN },
     { name: 'Activities', href: '#' },
     { name: 'Info & Advice', href: '#' },
     { name: 'View Points', href: '#' },
